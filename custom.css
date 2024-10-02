@@ -7,38 +7,7 @@
     gap: 18px;
 }
 
-.owl-dots {
-    position: relative !important;
-    width: 100% !important;
-    height: 8px !important;  /* Progress bar height */
-    background-color: #ccc !important; /* Background of the progress bar (unfilled part) */
-    margin-top: 20px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important; /* Align to the left */
+/* The actual progress bar */
+.progress-bar {
+    transition: width 0.5s ease;
 }
-
-.owl-dot {
-    width: 0 !important;  /* Start with no width */
-    height: 100% !important;
-    background-color: #333 !important;  /* Filled part */
-    transition: width 0.4s ease !important;
-}
-
-.owl-dot.active {
-    width: calc(100% / 3) !important; /* Fill the width based on total number of items (replace 5 with the total number of slides) */
-}
-
-
-/* .owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next,
-  .owl-carousel .owl-dot {
-    width:30px;
-    height:30px;
-}
-.owl-carousel .owl-nav .owl-prev{
-    background: url('left-icon.png') no-repeat;
-}
-.owl-carousel .owl-nav .owl-next{
-    background: url('right-icon.png') no-repeat;
-} */
