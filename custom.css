@@ -8,29 +8,27 @@
 }
 
 .owl-dots {
-    text-align: center !important;
-    margin-top: 20px !important;
     position: relative !important;
-    width: 100% !important;  /* Ensure full width */
+    width: 100% !important;
+    height: 8px !important;  /* Progress bar height */
+    background-color: #ccc !important; /* Background of the progress bar (unfilled part) */
+    margin-top: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* Align to the left */
 }
 
 .owl-dot {
-    display: inline-block !important;
-    width: calc(100% / 5 - 10px) !important; /* Assuming 5 items, adjust as needed */
-    height: 8px !important; /* Bar height */
-    background-color: #ccc !important;
-    margin: 0 5px !important; /* Spacing between bars */
-    transition: background-color 0.3s ease !important;
+    width: 0 !important;  /* Start with no width */
+    height: 100% !important;
+    background-color: #333 !important;  /* Filled part */
+    transition: width 0.4s ease !important;
 }
 
 .owl-dot.active {
-    background-color: #333 !important; /* Active bar color */
-    transform: scaleY(1.5) !important; /* Optional: make the active bar thicker */
+    width: calc(100% / 5) !important; /* Fill the width based on total number of items (replace 5 with the total number of slides) */
 }
 
-.owl-dot:hover {
-    background-color: #666 !important; /* Hover effect */
-}
 
 
 
