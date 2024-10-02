@@ -42,13 +42,8 @@
 
 @media (max-width: 767px) {
     .cci-cards .owl-nav{
-        display: block;
-        float:right;
-    }
-    .cci-cards .owl-nav::after {
-        content: "";
-        display: table;
-        clear: both;
+        position: absolute;
+        bottom: -28px;
     }
     .cci-cards .owl-dots {
         width: 100% !important;
