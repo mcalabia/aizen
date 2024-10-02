@@ -15,9 +15,10 @@ $(document).ready(function() {
 
     $('.cci-owl-carousel').owlCarousel({
         margin:22,
-        loop:true,
+        loop:false,
         autoWidth:true,
-        items:4
+        items:4,
+        nav:true
     })
 });
 
