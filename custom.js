@@ -7,6 +7,8 @@ $(document).ready(function() {
         autoplay:true,
         autoplayTimeout:5000,
         autoplayHoverPause:false,
-        slideTransition: 'linear'
+        slideTransition: 'linear',
+        autoplaySpeed: 6000,
+        smartSpeed: 6000
     })
 });
