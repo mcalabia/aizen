@@ -6,12 +6,17 @@
     display: flex;
     gap: 18px;
 }
+.owl-nav{
+    position: absolute;
+    right: 0;
+}
 
 .owl-dots {
     text-align: center !important;
-    margin-top: 10px !important;
     display:flex;
     flex-direction: row;
+    margin-top: 68px !important;
+    width: calc(100% - 250px) !important;
 }
 
 .owl-dot {
