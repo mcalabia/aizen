@@ -4,7 +4,7 @@ $(document).ready(function() {
         loop:true,
         autoWidth:true,
         items:4,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout:5000,
         autoplayHoverPause:false
     })
