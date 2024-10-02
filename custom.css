@@ -42,18 +42,5 @@
 }
 
 .arrow-left:hover, .arrow-right:hover {
-    opacity: .5;
+    opacity: 1;
 }
-
-/* .owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next,
-  .owl-carousel .owl-dot {
-    width:30px;
-    height:30px;
-}
-.owl-carousel .owl-nav .owl-prev{
-    background: url('left-icon.png') no-repeat;
-}
-.owl-carousel .owl-nav .owl-next{
-    background: url('right-icon.png') no-repeat;
-} */
