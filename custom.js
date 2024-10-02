@@ -21,15 +21,9 @@ $(document).ready(function() {
         nav:true,
         navText: [$('.arrow-left'),$('.arrow-right')],
         rewindNav : true,
-        onInitialized: updateProgressBar, 
-        onTranslated: updateProgressBar 
-    });
-
-    function updateProgressBar(event) {
-        var currentIndex = event.item.index - event.relatedTarget._clones.length / 2; 
-        var progressPercentage = ((currentIndex + 1) / totalItems) * 100;
-        $('.progress-bar').css('width', progressPercentage + '%');
-    }
+        dots: true, 
+        dotsEach: true, 
+    })
 });
 
 
