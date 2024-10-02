@@ -10,23 +10,25 @@
 .owl-dots {
     text-align: center !important;
     margin-top: 10px !important;
+    display:flex;
+    flex-direction: row;
 }
 
 .owl-dot {
     display: inline-block !important;
-    width: 30px !important; /* Width of the bar */
-    height: 5px !important;  /* Height of the bar */
-    background-color: #ccc !important;
+    width: 100% !important; /* Width of the bar */
+    height: 4px !important;  /* Height of the bar */
+    background-color: #010c5b24 !important;
     margin: 0 !important;
     transition: background-color 0.3s ease !important;
 }
 
 .owl-dot.active {
-    background-color: #333 !important; /* Color of the active bar */
+    background-color: #010b5b !important; /* Color of the active bar */
 }
 
 .owl-dot:hover {
-    background-color: #666 !important; /* Color of the bar on hover */
+    background-color: #010c5b8c !important; /* Color of the bar on hover */
 }
 
 
