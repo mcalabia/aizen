@@ -26,7 +26,7 @@
 }
 
 .owl-dot.active {
-    width: calc(100% / 5) !important; /* Fill the width based on total number of items (replace 5 with the total number of slides) */
+    width: calc(100% / 3) !important; /* Fill the width based on total number of items (replace 5 with the total number of slides) */
 }
 
 
