@@ -18,7 +18,9 @@ $(document).ready(function() {
         loop:false,
         autoWidth:true,
         items:4,
-        nav:true
+        nav:true,
+        navText: [$('.arrow-left'),$('.arrow-right')],
+        rewindNav : true,
     })
 });
 
