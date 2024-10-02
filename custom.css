@@ -8,20 +8,27 @@
 }
 
 .owl-dots {
-    text-align: center;
-    margin-top: 10px;
+    text-align: center !important;
+    margin-top: 10px !important;
 }
+
 .owl-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 5px;
+    display: inline-block !important;
+    width: 30px !important; /* Width of the bar */
+    height: 5px !important;  /* Height of the bar */
+    background-color: #ccc !important;
+    margin: 5px !important;
+    transition: background-color 0.3s ease !important;
 }
+
 .owl-dot.active {
-    background-color: #333; /* Active dot color */
+    background-color: #333 !important; /* Color of the active bar */
 }
+
+.owl-dot:hover {
+    background-color: #666 !important; /* Color of the bar on hover */
+}
+
 
 
 /* .owl-carousel .owl-nav .owl-prev,
