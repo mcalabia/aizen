@@ -21,7 +21,7 @@ $(document).ready(function() {
         nav:true,
         navText: [$('.arrow-left'),$('.arrow-right')],
         rewindNav : true,
-        dotsEach: true
+        dots:true,
     })
 });
 
