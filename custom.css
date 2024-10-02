@@ -9,25 +9,29 @@
 
 .owl-dots {
     text-align: center !important;
-    margin-top: 10px !important;
+    margin-top: 20px !important;
+    position: relative !important;
+    width: 100% !important;  /* Ensure full width */
 }
 
 .owl-dot {
     display: inline-block !important;
-    width: 30px !important; /* Width of the bar */
-    height: 5px !important;  /* Height of the bar */
+    width: calc(100% / 5 - 10px) !important; /* Assuming 5 items, adjust as needed */
+    height: 8px !important; /* Bar height */
     background-color: #ccc !important;
-    margin: 5px !important;
+    margin: 0 5px !important; /* Spacing between bars */
     transition: background-color 0.3s ease !important;
 }
 
 .owl-dot.active {
-    background-color: #333 !important; /* Color of the active bar */
+    background-color: #333 !important; /* Active bar color */
+    transform: scaleY(1.5) !important; /* Optional: make the active bar thicker */
 }
 
 .owl-dot:hover {
-    background-color: #666 !important; /* Color of the bar on hover */
+    background-color: #666 !important; /* Hover effect */
 }
+
 
 
 
