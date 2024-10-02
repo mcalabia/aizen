@@ -1,6 +1,11 @@
 .cci-cards .owl-stage-outer {
     overflow: visible!important;
 }
+.cci-cards .owl-nav {
+    margin-top: 48px !important;
+    display: flex;
+    gap: 18px;
+}
 
 /* .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next,
