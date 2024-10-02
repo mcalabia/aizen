@@ -7,6 +7,23 @@
     gap: 18px;
 }
 
+.owl-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+.owl-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 5px;
+}
+.owl-dot.active {
+    background-color: #333; /* Active dot color */
+}
+
+
 /* .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {
