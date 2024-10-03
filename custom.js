@@ -23,7 +23,16 @@ $(document).ready(function() {
         autoplayHoverPause:false,
         slideTransition: 'linear',
         autoplaySpeed: 6000,
-        smartSpeed: 6000
+        smartSpeed: 6000,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                margin:32,
+            },
+            767:{
+                margin:72,
+            }
+        }
     })
 
     $('.cci-owl-carousel').owlCarousel({
