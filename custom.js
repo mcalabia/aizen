@@ -29,6 +29,7 @@ $(document).ready(function() {
         margin:48,
         loop:false,
         autoWidth:true,
+        items:1,
         nav:true,
         navText: [$('.t-arrow-left'),$('.t-arrow-right')],
         rewindNav : true,
@@ -36,8 +37,7 @@ $(document).ready(function() {
         dotsEach: true, 
     })
 
-    $('.testimonial-owl-carousel .owl-nav').removeClass('disabled');
-    $('.testimonial-owl-carousel .owl-dots').removeClass('disabled');
+   
 });
 
 
