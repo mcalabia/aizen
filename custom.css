@@ -1,23 +1,23 @@
-.cci-cards .owl-stage-outer {
+.cci-cards .owl-stage-outer, .testimonial-owl-carousel .owl-stage-outer{
     overflow: visible!important;
 }
-.cci-cards .owl-nav {
+.cci-cards .owl-nav, .testimonial-owl-carousel .owl-nav{
     margin-top: 48px !important;
     display: flex;
     gap: 18px;
 }
-.cci-cards .owl-nav{
+.cci-cards .owl-nav, .testimonial-owl-carousel .owl-nav{
     position: absolute;
     right: 0;
 }
-.cci-cards .owl-dots {
+.cci-cards .owl-dots, .testimonial-owl-carousel .owl-dots{
     text-align: center !important;
     display:flex;
     flex-direction: row;
     margin-top: 68px !important;
     width: calc(100% - 250px) !important;
 }
-.cci-cards .owl-dot {
+.cci-cards .owl-dot, .testimonial-owl-carousel .owl-dot {
     display: inline-block !important;
     width: 100% !important; /* Width of the bar */
     height: 4px !important;  /* Height of the bar */
@@ -25,10 +25,10 @@
     margin: 0 !important;
     transition: background-color 0.3s ease !important;
 }
-.cci-cards .owl-dot.active {
+.cci-cards .owl-dot.active , .testimonial-owl-carousel .owl-dot.active {
     background-color: #010b5b !important; /* Color of the active bar */
 }
-.cci-cards .owl-dot:hover {
+.cci-cards .owl-dot:hover, .testimonial-owl-carousel .owl-dot:hover{
     background-color: #010c5b8c !important; /* Color of the bar on hover */
 }
 .arrow-left, .arrow-right {
@@ -41,11 +41,11 @@
 
 
 @media (max-width: 767px) {
-    .cci-cards .owl-nav{
+    .cci-cards .owl-nav, .testimonial-owl-carousel .owl-nav{
         position: absolute;
         bottom: -28px;
     }
-    .cci-cards .owl-dots {
+    .cci-cards .owl-dots, .testimonial-owl-carousel .owl-dots{
         width: 100% !important;
     }
 }

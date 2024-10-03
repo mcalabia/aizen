@@ -24,6 +24,18 @@ $(document).ready(function() {
         dots: true, 
         dotsEach: true, 
     })
+
+    $('.testimonial-owl-carousel').owlCarousel({
+        margin:48,
+        loop:false,
+        autoWidth:true,
+        nav:true,
+        navText: [$('.arrow-left'),$('.arrow-right')],
+        rewindNav : true,
+        dots: true, 
+        dotsEach: true, 
+    })
+    
 });
 
 
