@@ -29,6 +29,7 @@ $(document).ready(function() {
         margin:48,
         loop:false,
         autoWidth:true,
+        items:3,
         nav:true,
         navText: [$('.t-arrow-left'),$('.t-arrow-right')],
         rewindNav : true,
