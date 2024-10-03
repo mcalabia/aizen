@@ -35,6 +35,15 @@ $(document).ready(function() {
         rewindNav : true,
         dots: true, 
         dotsEach: true, 
+        responsiveClass:true,
+        responsive:{
+            0:{
+                autoWidth:false
+            },
+            991:{
+                autoWidth:true
+            }
+        }
     })
 
    
