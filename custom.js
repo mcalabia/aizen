@@ -30,7 +30,7 @@ $(document).ready(function() {
         loop:false,
         autoWidth:true,
         nav:true,
-        navText: [$('.arrow-left'),$('.arrow-right')],
+        navText: [$('.t-arrow-left'),$('.t-arrow-right')],
         rewindNav : true,
         dots: true, 
         dotsEach: true, 
