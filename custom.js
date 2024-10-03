@@ -35,7 +35,9 @@ $(document).ready(function() {
         dots: true, 
         dotsEach: true, 
     })
-    
+
+    $('.testimonial-owl-carousel .owl-nav').removeClass('disabled');
+    $('.testimonial-owl-carousel .owl-dots').removeClass('disabled');
 });
 
 
