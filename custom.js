@@ -14,7 +14,7 @@ $(document).ready(function() {
     })
 
     $('.tcl-owl-carousel').owlCarousel({
-        margin:112,
+        margin:72,
         loop:true,
         autoWidth:true,
         nav: false,
