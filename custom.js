@@ -70,38 +70,20 @@ $(document).ready(function() {
         }
     })
 
+    function tabloop() {
+        setTimeout(function() {
+            var $current = $('.dtct-tabs-menu').children('.w--current:first');
+            var $next = $current.next();
+            if ($next.length === 0) {
+                $next = $('.dtct-tabs-menu').children().first();
+            }
+            $next.removeAttr("href").trigger('click');
+            tabloop();
+        }, 5000);
+    }
+    tabloop();
+    
    
 });
 
 
-var Webflow = Webflow || [];
-Webflow.push(function () {
-
-var tabTimeout;
-clearTimeout(tabTimeout);
-tabLoop();
-
-function tabLoop() {
-tabTimeout = setTimeout(function() {
-var $next = $('.tabs-list').children('.w--current:first').next();
-if($next.length) {
-if ($(".menu-button").hasClass("w--open")) {
-tabLoop();
-}else{
-$next.removeAttr("href").click();
-}
-} else {
-if ($(".menu-button").hasClass("w--open")){
-tabLoop();
-}else{
-$('.tab-text-box:first').removeAttr("href").click();
-}
-}
-}, 5000); // 5 seconds
-}
-
-$('.tab-text-box').click(function() {
-clearTimeout(tabTimeout);
-tabLoop();
-});
-});
