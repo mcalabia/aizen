@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('.ac-first').trigger('click');
+
     $('.lc-owl-carousel').owlCarousel({
         margin:112,
         loop:true,
