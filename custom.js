@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.ac-first .ac-toggle').trigger('click');
+    $('.ac-first').trigger('click');
 
     $('.lc-owl-carousel').owlCarousel({
         margin:112,
