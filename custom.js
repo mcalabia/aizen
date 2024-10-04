@@ -1,6 +1,15 @@
 $(document).ready(function() {
-    $('.ac-first').trigger('click');
-
+    if ($('.ac-first').length) {
+        $('.ac-first').trigger('click');
+    } else {
+        // Wait for the element to appear if it's dynamically loaded
+        var checkExist = setInterval(function() {
+            if ($('.ac-first').length) {
+                $('.ac-first').trigger('click');
+                clearInterval(checkExist); // Stop checking after element is found
+            }
+        }, 100); // Check every 100 milliseconds
+    }
     $('.lc-owl-carousel').owlCarousel({
         margin:112,
         loop:true,
