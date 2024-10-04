@@ -1,6 +1,7 @@
 $(document).ready(function() {
     if ($('.ac-first').length) {
         $('.ac-first').trigger('click');
+        console.log($('.ac-first').html())
     } else {
         // Wait for the element to appear if it's dynamically loaded
         var checkExist = setInterval(function() {
@@ -10,6 +11,8 @@ $(document).ready(function() {
             }
         }, 100); // Check every 100 milliseconds
     }
+
+
     $('.lc-owl-carousel').owlCarousel({
         margin:112,
         loop:true,
