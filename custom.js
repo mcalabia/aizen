@@ -1,18 +1,7 @@
 $(document).ready(function() {
-    if ($('.ac-first').length) {
-        $('.ac-first').trigger('click');
-        console.log($('.ac-first').html())
-    } else {
-        // Wait for the element to appear if it's dynamically loaded
-        var checkExist = setInterval(function() {
-            if ($('.ac-first').length) {
-                $('.ac-first').trigger('click');
-                clearInterval(checkExist); // Stop checking after element is found
-            }
-        }, 100); // Check every 100 milliseconds
-    }
-
-
+    $('.ac-first .ac-toggle').trigger('click');
+    console.log($('.ac-first .ac-toggle').html());
+    
     $('.lc-owl-carousel').owlCarousel({
         margin:112,
         loop:true,
