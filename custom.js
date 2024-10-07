@@ -99,7 +99,7 @@ $(document).ready(function() {
         duration: 0.5, // Duration of the fade
         scrollTrigger: {
             trigger: "#data-container", // The container you're scrolling on
-            start: "top center", // Start when the top of #data-container hits the center of the viewport
+            start: "top 25%", // Start when the top of #data-container hits the center of the viewport
             end: "bottom center", // End when the bottom of #data-container hits the center of the viewport
             scrub: true, // Smooth transition during scroll
             markers: true, // Enable markers for debugging
