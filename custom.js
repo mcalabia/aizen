@@ -99,7 +99,7 @@ $(document).ready(function() {
               start: "top center", // Start when the top of #data hits the center of the viewport
               end: "bottom center", // End when the bottom of #data hits the center of the viewport
               scrub: true, // Smooth transition during scroll
-              toggleActions: "play none none restart" // Controls actions on scroll
+              toggleActions: "play none none reverse" // Controls actions on scroll
           }
       });
    
