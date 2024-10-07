@@ -102,7 +102,6 @@ $(document).ready(function() {
         gsap.set(selector, { opacity: 0.5 });
         gsap.fromTo(selector, 
             { opacity: 0.5,
-                padding: '8px 16px 8px 8px;',
 
              }, // Initial state
             {   padding: '8px 8px 8px 8px;',
@@ -115,8 +114,8 @@ $(document).ready(function() {
                     scrub: true, // Smooth transition during scroll
                     markers: true, // Enable markers for debugging
                     toggleActions: "play reset play reset", // Controls actions on scroll
-                    onLeave: () => gsap.set(selector, { opacity: 0.5, padding: '8px 16px 8px 8px;', }), // Set opacity to 0.5 on leave
-                    onLeaveBack: () => gsap.set(selector, { opacity: 0.5, padding: '8px 16px 8px 8px;', }) // Set opacity to 0.5 on leave back
+                    onLeave: () => gsap.set(selector, { opacity: 0.5 }), // Set opacity to 0.5 on leave
+                    onLeaveBack: () => gsap.set(selector, { opacity: 0.5 }) // Set opacity to 0.5 on leave back
                 }
             }
         );
