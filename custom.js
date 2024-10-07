@@ -89,7 +89,7 @@ $(document).ready(function() {
 
     if (window.matchMedia("(max-width: 991px)").matches) {
         $('.dtct-dropdown-mobile:first').trigger('click');
-
+        $('.dtct-dropdown-toggle:first').trigger('click');
     }
 
     // function DTCTTabloopMobile() {
