@@ -85,9 +85,17 @@ $(document).ready(function() {
         DTCTTabloopDesktop();
     }
 
-    $('.ac-first').trigger('click');
-    $('.dtct-mobile-dropdown-first').trigger('click');
-    $('#dtct-mobile-dropdown').trigger('click');
+    if ($('.ac-first').length > 0) {
+        $('.ac-first').trigger('click');
+    } else {
+        console.log('.ac-first element not found');
+    }
+
+    if ($('.dtct-mobile-dropdown-first').length > 0) {
+        $('.dtct-mobile-dropdown-first').trigger('click');
+    } else {
+        console.log('.dtct-mobile-dropdown-first element not found');
+    }
     
 
     // function DTCTTabloopMobile() {
