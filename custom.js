@@ -136,21 +136,22 @@ function dropdown() {
     dds.each(function () {
         const nav_dds = $(this).find(".dropdown-nav"); // Use 'this' to refer to the current dropdown element
 
-        dds.hover(
+        nav_dds.hover(
             function () {
-                nav_dds.addClass("hovering"); // Add class to the parent dropdown
+                $(this).addClass("hovering"); // Add class to the current nav_dds
             },
             function () {
-                nav_dds.removeClass("hovering"); // Remove class from the parent dropdown
+                $(this).removeClass("hovering"); // Remove class from the current nav_dds
             }
         );
 
-        console.log($(nav_dds).html())
+        console.log(nav_dds.html()); // Log the HTML of the current nav_dds
     });
 }
 
 // Call the dropdown function
 dropdown();
+
 
 });
 
