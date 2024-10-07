@@ -86,6 +86,12 @@ $(document).ready(function() {
     }
 
     $('.ac-first').trigger('click');
+
+    if (window.matchMedia("(max-width: 991px)").matches) {
+        $('.dtct-dropdown-mobile:first').trigger('click');
+
+    }
+
     // function DTCTTabloopMobile() {
     //     setTimeout(function() {
     //         var $current = $('.dtct-tab-mobile').children('.w--current:first');
