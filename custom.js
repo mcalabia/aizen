@@ -71,6 +71,7 @@ $(document).ready(function() {
     })
 
     function DTCTTabloopDesktop() {
+        if (window.matchMedia("(min-width: 992px)").matches) {
         setTimeout(function() {
             var $current = $('.dtct-tabs-menu').children('.w--current:first');
             var $next = $current.next();
@@ -80,10 +81,11 @@ $(document).ready(function() {
             $next.removeAttr("href").trigger('click');
             tabloop();
         }, 10000);
+        }
     }
-    if (window.matchMedia("(min-width: 992px)").matches) {
-        DTCTTabloopDesktop();
-    }
+   
+    DTCTTabloopDesktop();
+    
 
     // function DTCTTabloopMobile() {
     //     setTimeout(function() {
