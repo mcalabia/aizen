@@ -93,7 +93,7 @@ $(document).ready(function() {
     // Set initial opacity for elements
     const elements = [
         { selector: "#data", trigger: "#data-container" },
-        { selector: "#machine-learning", trigger: "#machine-learning-container" }
+        { selector: "#machine-learning", trigger: "#machine-learning-container" },
         { selector: "#infastructure", trigger: "#infastructure-container" }
     ];
 
