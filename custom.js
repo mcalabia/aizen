@@ -92,17 +92,19 @@ $(document).ready(function() {
       
       // Scroll-triggered opacity change for menu with id="data"
       gsap.to("#data", {
-          opacity: 1, // Final opacity
-          duration: 0.5, // Duration of the fade
-          scrollTrigger: {
-              trigger: "#data-container",  // The container you're scrolling on
-              start: "top center", // Start when the top of #data hits the center of the viewport
-              end: "bottom center", // End when the bottom of #data hits the center of the viewport
-              scrub: true, // Smooth transition during scroll
-              markers: true,
-              toggleActions: "play none none reverse" // Controls actions on scroll
-          }
-      });
+        opacity: 0.5, // Final opacity
+        duration: 0.5, // Duration of the fade
+        scrollTrigger: {
+            trigger: "#data-container", // The container you're scrolling on
+            start: "top center", // Start when the top of #data-container hits the center of the viewport
+            end: "bottom center", // End when the bottom of #data-container hits the center of the viewport
+            scrub: true, // Smooth transition during scroll
+            markers: true, // Enable markers for debugging
+            onUpdate: (self) => console.log("Progress:", self.progress()), // Log progress
+            toggleActions: "play none none reverse" // Controls actions on scroll
+        }
+    });
+    
    
 });
 
