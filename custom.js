@@ -93,27 +93,26 @@ $(document).ready(function() {
     // Set initial opacity of #data to 0.5
     gsap.set("#data", { opacity: 0.5 });
 
-    // Create a timeline with ScrollTrigger
-    let sntcc = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#data-container", // The container you're scrolling on
-            start: "top 80%", // Start when the top of #data-container hits the center of the viewport
-            end: "bottom 80%", // End when the bottom of #data-container hits the center of the viewport
-            scrub: true, // Smooth transition during scroll
-            markers: true, // Enable markers for debugging
-            onLeave: () => gsap.set("#data", { opacity: 0.5 }), // Set opacity to 0.5 when leaving the trigger
-            onLeaveBack: () => gsap.set("#data", { opacity: 0.5 }) // Set opacity to 0.5 when scrolling back past the start
+    gsap.fromTo('#data',
+        {
+            opacity: 1, 
+        },
+        {
+            opacity: 0.5,
+            duration: 0.8,
+            overwrite: true,
+            ease: Power2.easeOut,
+            scrollTrigger: {
+                trigger: '#data-container',
+                start: "top 65%",
+                end: "bottom 80%", 
+                invalidateOnRefresh: true,
+                markers: true, 
+                onLeave: () => gsap.set("#data", { opacity: 0.5 }), 
+                onLeaveBack: () => gsap.set("#data", { opacity: 0.5 }) 
+            },
         }
-    });
-
-    // Scroll-triggered opacity change for menu with id="data"
-    sntcc.to("#data", {
-        opacity: 1, // Final opacity
-        duration: 0.5 // Duration of the fade
-    });
-
-
-    
+    );
     
    
 });
