@@ -138,12 +138,14 @@ function dropdown() {
 
         nav_dds.hover(
             function () {
-                dds.addClass("hovering"); // Add class to the parent dropdown
+                nav_dds.addClass("hovering"); // Add class to the parent dropdown
             },
             function () {
-                dds.removeClass("hovering"); // Remove class from the parent dropdown
+                nav_dds.removeClass("hovering"); // Remove class from the parent dropdown
             }
         );
+
+        console.log(nav_dds.html());
     });
 }
 
