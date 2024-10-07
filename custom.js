@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.ac-first').trigger('click');
+    
 
     $('.lc-owl-carousel').owlCarousel({
         margin:112,
@@ -85,6 +85,7 @@ $(document).ready(function() {
         DTCTTabloopDesktop();
     }
 
+    $('.ac-first').trigger('click');
     // function DTCTTabloopMobile() {
     //     setTimeout(function() {
     //         var $current = $('.dtct-tab-mobile').children('.w--current:first');
