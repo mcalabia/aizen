@@ -98,7 +98,7 @@ $(document).ready(function() {
         scrollTrigger: {
             trigger: "#data-container", // The container you're scrolling on
             start: "top 80%", // Start when the top of #data-container hits the center of the viewport
-            end: "bottom center", // End when the bottom of #data-container hits the center of the viewport
+            end: "bottom 80%", // End when the bottom of #data-container hits the center of the viewport
             scrub: true, // Smooth transition during scroll
             markers: true, // Enable markers for debugging
             onLeave: () => gsap.set("#data", { opacity: 0.5 }), // Set opacity to 0.5 when leaving the trigger
