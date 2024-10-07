@@ -94,6 +94,7 @@ $(document).ready(function() {
     const elements = [
         { selector: "#data", trigger: "#data-container" },
         { selector: "#machine-learning", trigger: "#machine-learning-container" }
+        { selector: "#infastructure", trigger: "#infastructure-container" }
     ];
 
     // Set initial opacity and create scroll-triggered animations
