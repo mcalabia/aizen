@@ -85,17 +85,10 @@ $(document).ready(function() {
         DTCTTabloopDesktop();
     }
 
-    if ($('.ac-first').length > 0) {
+    setTimeout(function() {
         $('.ac-first').trigger('click');
-    } else {
-        console.log('.ac-first element not found');
-    }
-
-    if ($('.dtct-mobile-dropdown-first').length > 0) {
         $('.dtct-mobile-dropdown-first').trigger('click');
-    } else {
-        console.log('.dtct-mobile-dropdown-first element not found');
-    }
+    }, 500); // 500 milliseconds = 0.5 seconds
     
 
     // function DTCTTabloopMobile() {
