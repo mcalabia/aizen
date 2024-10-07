@@ -70,7 +70,7 @@ $(document).ready(function() {
         }
     })
 
-    function tabloop() {
+    function DTCTTabloopDesktop() {
         setTimeout(function() {
             var $current = $('.dtct-tabs-menu').children('.w--current:first');
             var $next = $current.next();
@@ -81,7 +81,22 @@ $(document).ready(function() {
             tabloop();
         }, 10000);
     }
-    tabloop();
+    if (window.matchMedia("(min-width: 992px)").matches) {
+        DTCTTabloopDesktop();
+    }
+
+    // function DTCTTabloopMobile() {
+    //     setTimeout(function() {
+    //         var $current = $('.dtct-tab-mobile').children('.w--current:first');
+    //         var $next = $current.next();
+    //         if ($next.length === 0) {
+    //             $next = $('.dtct-tabs-menu').children().first();
+    //         }
+    //         $next.removeAttr("href").trigger('click');
+    //         tabloop();
+    //     }, 10000);
+    // }
+    // DTCTTabloopDesktop();
     
    
 });
