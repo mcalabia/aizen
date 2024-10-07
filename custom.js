@@ -90,30 +90,35 @@ $(document).ready(function() {
     
     gsap.registerPlugin(ScrollTrigger);
 
-    // Set initial opacity of #data to 0.5
-    gsap.set("#data", { opacity: 0.5 });
+    // Set initial opacity for elements
+    const elements = [
+        { selector: "#data", trigger: "#data-container" },
+        { selector: "#machine-learning", trigger: "#machine-learning-container" }
+    ];
 
-    // Scroll-triggered opacity change for menu with id="data"
-    gsap.fromTo("#data", 
-        { opacity: 0.5 }, // Initial state
-        {
-            opacity: 1, // Final opacity
-            duration: 0.5, // Duration of the fade
-            scrollTrigger: {
-                trigger: "#data-container", // The container you're scrolling on
-                start: "top 65%", // Start when the top of #data-container hits the center of the viewport
-                end: "bottom 65%", // End when the bottom of #data-container hits the center of the viewport
-                scrub: true, // Smooth transition during scroll
-                markers: true, // Enable markers for debugging
-                toggleActions: "play reset play reset", // Controls actions on scroll
-                onLeave: () => gsap.set("#data", { opacity: 0.5 }), // Set opacity to 0.5 when leaving the trigger
-                onLeaveBack: () => gsap.set("#data", { opacity: 0.5 }) // Set opacity to 0.5 when scrolling back past the start
+    // Set initial opacity and create scroll-triggered animations
+    elements.forEach(({ selector, trigger }) => {
+        gsap.set(selector, { opacity: 0.5 });
+        gsap.fromTo(selector, 
+            { opacity: 0.5 }, // Initial state
+            {
+                opacity: 1, // Final opacity
+                duration: 0.5, // Duration of the fade
+                scrollTrigger: {
+                    trigger, // Unique trigger for each element
+                    start: "top 65%", // Start position
+                    end: "bottom 65%", // End position
+                    scrub: true, // Smooth transition during scroll
+                    markers: true, // Enable markers for debugging
+                    toggleActions: "play reset play reset", // Controls actions on scroll
+                    onLeave: () => gsap.set(selector, { opacity: 0.5 }), // Set opacity to 0.5 on leave
+                    onLeaveBack: () => gsap.set(selector, { opacity: 0.5 }) // Set opacity to 0.5 on leave back
+                }
             }
-        }
-    );
+        );
+    }); 
 
 
-    
     
    
 });
