@@ -136,7 +136,7 @@ function dropdown() {
     dds.each(function () {
         const nav_dds = $(this).find(".main-nav-dd"); // Use 'this' to refer to the current dropdown element
 
-        nav_dds.hover(
+        dds.hover(
             function () {
                 nav_dds.addClass("hovering"); // Add class to the parent dropdown
             },
