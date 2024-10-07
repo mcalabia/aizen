@@ -97,7 +97,7 @@ $(document).ready(function() {
     let sntcc = gsap.timeline({
         scrollTrigger: {
             trigger: "#data-container", // The container you're scrolling on
-            start: "top 25%", // Start when the top of #data-container hits the center of the viewport
+            start: "top 80%", // Start when the top of #data-container hits the center of the viewport
             end: "bottom center", // End when the bottom of #data-container hits the center of the viewport
             scrub: true, // Smooth transition during scroll
             markers: true, // Enable markers for debugging
