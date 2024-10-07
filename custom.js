@@ -86,7 +86,9 @@ $(document).ready(function() {
     }
 
     $('.ac-first').trigger('click');
+    $('.dtct-mobile-dropdown-first').trigger('click');
     $('#dtct-mobile-dropdown').trigger('click');
+    
 
     // function DTCTTabloopMobile() {
     //     setTimeout(function() {
