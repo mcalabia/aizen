@@ -70,19 +70,19 @@ $(document).ready(function() {
         }
     })
 
-    function DTCTTabloopDesktop() {
-        setTimeout(function() {
-            var $current = $('.dtct-tabs-menu').children('.w--current:first');
-            var $next = $current.next();
-            if ($next.length === 0) {
-                $next = $('.dtct-tabs-menu').children().first();
-            }
-            $next.removeAttr("href").trigger('click');
-            tabloop();
-        }, 10000);
-    }
+    // function DTCTTabloopDesktop() {
+    //     setTimeout(function() {
+    //         var $current = $('.dtct-tabs-menu').children('.w--current:first');
+    //         var $next = $current.next();
+    //         if ($next.length === 0) {
+    //             $next = $('.dtct-tabs-menu').children().first();
+    //         }
+    //         $next.removeAttr("href").trigger('click');
+    //         tabloop();
+    //     }, 10000);
+    // }
    
-    DTCTTabloopDesktop();
+    // DTCTTabloopDesktop();
     
 
     // function DTCTTabloopMobile() {
