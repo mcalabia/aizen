@@ -100,7 +100,7 @@ $(document).ready(function() {
             end: "bottom bottom", // End when the bottom of #data-container hits the center of the viewport
             scrub: true, // Smooth transition during scroll
             markers: true, // Enable markers for debugging
-            toggleActions: "play reset play reset" // Controls actions on scroll
+            toggleActions: "play reverse play reverse" // Controls actions on scroll
         }
     });
     
