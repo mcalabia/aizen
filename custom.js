@@ -90,36 +90,43 @@ $(document).ready(function() {
     
     gsap.registerPlugin(ScrollTrigger);
 
-    // Set initial opacity for elements
-    const elements = [
-        { selector: "#data", trigger: "#data-container" },
-        { selector: "#machine-learning", trigger: "#machine-learning-container" },
-        { selector: "#infastructure", trigger: "#infastructure-container" }
-    ];
+// Set initial opacity for elements
+const elements = [
+    { selector: "#data", trigger: "#data-container" },
+    { selector: "#machine-learning", trigger: "#machine-learning-container" },
+    { selector: "#infrastructure", trigger: "#infrastructure-container" } // Fixed typo: "infastructure" to "infrastructure"
+];
 
-    // Set initial opacity and create scroll-triggered animations
-    elements.forEach(({ selector, trigger }) => {
-        gsap.set(selector, { opacity: 0.5 });
-        gsap.fromTo(selector, 
-            { opacity: 0.5,
-
-             }, // Initial state
-            {   padding: '8px 8px 8px 8px;',
-                opacity: 1, // Final opacity
-                duration: 0.5, // Duration of the fade
+elements.forEach(({ selector, trigger }) => {
+    const element = document.querySelector(selector);
+    const triggerElement = document.querySelector(trigger);
+    
+    // Check if both the element and its trigger exist
+    if (element && triggerElement) {
+        gsap.set(element, { opacity: 0.5 });
+        gsap.fromTo(element, 
+            { opacity: 0.5 }, 
+            { 
+                padding: '8px', // Corrected padding syntax
+                opacity: 1, 
+                duration: 0.5, 
                 scrollTrigger: {
-                    trigger, // Unique trigger for each element
-                    start: "top 65%", // Start position
-                    end: "bottom 65%", // End position
-                    scrub: true, // Smooth transition during scroll
-                    markers: true, // Enable markers for debugging
-                    toggleActions: "play reset play reset", // Controls actions on scroll
-                    onLeave: () => gsap.set(selector, { opacity: 0.5 }), // Set opacity to 0.5 on leave
-                    onLeaveBack: () => gsap.set(selector, { opacity: 0.5 }) // Set opacity to 0.5 on leave back
+                    trigger: triggerElement, 
+                    start: "top 65%",
+                    end: "bottom 65%", 
+                    scrub: true, 
+                    markers: true, 
+                    toggleActions: "play reset play reset", 
+                    onLeave: () => gsap.set(element, { opacity: 0.5 }), 
+                    onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
                 }
             }
         );
-    }); 
+    } else {
+        console.warn(`Element or trigger not found: ${selector} / ${trigger}`);
+    }
+});
+
 
 
     
