@@ -91,21 +91,26 @@ $(document).ready(function() {
     gsap.registerPlugin(ScrollTrigger);
 
 // Set initial opacity of #data to 0.5
-gsap.set("#data", { opacity: 0.5 });
+    gsap.set("#data", { opacity: 0.5 });
+
+    let sntcc = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#data-container", // The container you're scrolling on
+            start: "top center", // Start when the top of #data-container hits the center of the viewport
+            end: "bottom center", // End when the bottom of #data-container hits the center of the viewport
+            scrub: true, // Smooth transition during scroll
+            markers: true, // Enable markers for debugging
+        }
+    })
 
 // Scroll-triggered opacity change for menu with id="data"
-    gsap.to("#data", {
+    sntcc.to("#data", {
     opacity: 1, // Final opacity
     duration: 0.5, // Duration of the fade
     scrollTrigger: {
-        trigger: "#data-container", // The container you're scrolling on
-        start: "top center", // Start when the top of #data-container hits the center of the viewport
-        end: "bottom center", // End when the bottom of #data-container hits the center of the viewport
-        scrub: true, // Smooth transition during scroll
-        markers: true, // Enable markers for debugging
         toggleActions: "play reset play reset", // Controls actions on scroll
-        onLeave: () => gsap.set("#data", { opacity: 0.5 }), // Set opacity to 0.5 when leaving the trigger
-        onLeaveBack: () => gsap.set("#data", { opacity: 0.5 }) // Set opacity to 0.5 when scrolling back past the start
+            onLeave: () => gsap.set("#data", { opacity: 0.5 }), // Set opacity to 0.5 when leaving the trigger
+            onLeaveBack: () => gsap.set("#data", { opacity: 0.5 }) // Set opacity to 0.5 when scrolling back past the start
     }
 });
 
