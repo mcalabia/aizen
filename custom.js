@@ -89,9 +89,12 @@ $(document).ready(function() {
     $('.dtct-mobile-dropdown-first').trigger('click');
     
     gsap.registerPlugin(ScrollTrigger);
-      
-      // Scroll-triggered opacity change for menu with id="data"
-      gsap.to("#data", {
+
+    // Set initial opacity of #data to 0.5
+    gsap.set("#data", { opacity: 0.5 });
+    
+    // Scroll-triggered opacity change for menu with id="data"
+    gsap.to("#data", {
         opacity: 1, // Final opacity
         duration: 0.5, // Duration of the fade
         scrollTrigger: {
@@ -103,6 +106,7 @@ $(document).ready(function() {
             toggleActions: "play reset play reset" // Controls actions on scroll
         }
     });
+    
     
    
 });
