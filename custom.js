@@ -129,22 +129,27 @@ elements.forEach(({ selector, trigger }) => {
 
 
 
-    
+function dropdown() {
+    const dds = $(".header-nav-dropdown");
 
-    function dropdown() {
-        const dds = $(".header-nav-dropdown");
-        const nav_dds = $(this + " .main-nav-dd");
-        console.log(nav_dds.html())
-        dds.hover(
+    // Attach hover events to each dropdown element
+    dds.each(function () {
+        const nav_dds = $(this).find(".main-nav-dd"); // Use 'this' to refer to the current dropdown element
+
+        nav_dds.hover(
             function () {
-                nav.addClass("hovering");
-            }, function () {
-                nav.removeClass("hovering");
+                dds.addClass("hovering"); // Add class to the parent dropdown
+            },
+            function () {
+                dds.removeClass("hovering"); // Remove class from the parent dropdown
             }
         );
-    }
-    
-    dropdown()
+    });
+}
+
+// Call the dropdown function
+dropdown();
+
 });
 
 
