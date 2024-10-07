@@ -145,7 +145,7 @@ function dropdown() {
             }
         );
 
-        console.log(nav_dds.html());
+        console.log($(nav_dds).html())
     });
 }
 
