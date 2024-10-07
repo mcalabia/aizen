@@ -116,7 +116,7 @@ $(document).ready(function() {
                     markers: true, // Enable markers for debugging
                     toggleActions: "play reset play reset", // Controls actions on scroll
                     onLeave: () => gsap.set(selector, { opacity: 0.5, padding: '8px 16px 8px 8px;', }), // Set opacity to 0.5 on leave
-                    onLeaveBack: () => gsap.set(selector, { opacity: 0.5. padding: '8px 16px 8px 8px;', }) // Set opacity to 0.5 on leave back
+                    onLeaveBack: () => gsap.set(selector, { opacity: 0.5, padding: '8px 16px 8px 8px;', }) // Set opacity to 0.5 on leave back
                 }
             }
         );
