@@ -134,7 +134,7 @@ function dropdown() {
 
     // Attach hover events to each dropdown element
     dds.each(function () {
-        const nav_dds = $(this).find(".main-nav-dd"); // Use 'this' to refer to the current dropdown element
+        const nav_dds = $(this).find(".dropdown-nav"); // Use 'this' to refer to the current dropdown element
 
         dds.hover(
             function () {
