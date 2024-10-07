@@ -92,7 +92,7 @@ $(document).ready(function() {
       
       // Scroll-triggered opacity change for menu with id="data"
       gsap.to("#data", {
-        opacity: 0.5, // Final opacity
+        opacity: 1, // Final opacity
         duration: 0.5, // Duration of the fade
         scrollTrigger: {
             trigger: "#data-container", // The container you're scrolling on
@@ -100,7 +100,7 @@ $(document).ready(function() {
             end: "bottom center", // End when the bottom of #data-container hits the center of the viewport
             scrub: true, // Smooth transition during scroll
             markers: true, // Enable markers for debugging
-            toggleActions: "play none none reverse" // Controls actions on scroll
+            toggleActions: "play reset play reset" // Controls actions on scroll
         }
     });
     
