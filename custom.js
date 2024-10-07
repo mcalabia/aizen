@@ -88,20 +88,20 @@ $(document).ready(function() {
     $('.ac-first').trigger('click');
     $('.dtct-mobile-dropdown-first').trigger('click');
     
-
-    // function DTCTTabloopMobile() {
-    //     setTimeout(function() {
-    //         var $current = $('.dtct-tab-mobile').children('.w--current:first');
-    //         var $next = $current.next();
-    //         if ($next.length === 0) {
-    //             $next = $('.dtct-tabs-menu').children().first();
-    //         }
-    //         $next.removeAttr("href").trigger('click');
-    //         tabloop();
-    //     }, 10000);
-    // }
-    // DTCTTabloopDesktop();
-    
+    gsap.registerPlugin(ScrollTrigger);
+      
+      // Scroll-triggered opacity change for menu with id="data"
+      gsap.to("#data", {
+          opacity: 1, // Final opacity
+          duration: 0.5, // Duration of the fade
+          scrollTrigger: {
+              trigger: "#data",  // The container you're scrolling on
+              start: "top center", // Start when the top of #data hits the center of the viewport
+              end: "bottom center", // End when the bottom of #data hits the center of the viewport
+              scrub: true, // Smooth transition during scroll
+              toggleActions: "play none none none" // Controls actions on scroll
+          }
+      });
    
 });
 
