@@ -88,8 +88,7 @@ $(document).ready(function() {
     $('.ac-first').trigger('click');
 
     if (window.matchMedia("(max-width: 991px)").matches) {
-        $('.dtct-dropdown-mobile').trigger('click');
-        $('.dtct-dropdown-toggle').trigger('click');
+        $('#dtct-mobile-dropdown').trigger('click');
     }
 
     // function DTCTTabloopMobile() {
