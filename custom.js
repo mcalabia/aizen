@@ -85,10 +85,8 @@ $(document).ready(function() {
         DTCTTabloopDesktop();
     }
 
-    setTimeout(function() {
-        $('.ac-first').trigger('click');
-        $('.dtct-mobile-dropdown-first').trigger('click');
-    }, 500); // 500 milliseconds = 0.5 seconds
+    $('.ac-first').trigger('click');
+    $('.dtct-mobile-dropdown-first').trigger('click');
     
 
     // function DTCTTabloopMobile() {
