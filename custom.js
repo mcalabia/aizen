@@ -100,7 +100,6 @@ $(document).ready(function() {
             end: "bottom center", // End when the bottom of #data-container hits the center of the viewport
             scrub: true, // Smooth transition during scroll
             markers: true, // Enable markers for debugging
-            onUpdate: (self) => console.log("Progress:", self.progress()), // Log progress
             toggleActions: "play none none reverse" // Controls actions on scroll
         }
     });
