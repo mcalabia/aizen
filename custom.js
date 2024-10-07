@@ -95,7 +95,7 @@ $(document).ready(function() {
           opacity: 1, // Final opacity
           duration: 0.5, // Duration of the fade
           scrollTrigger: {
-              trigger: "#data",  // The container you're scrolling on
+              trigger: "#data-container",  // The container you're scrolling on
               start: "top center", // Start when the top of #data hits the center of the viewport
               end: "bottom center", // End when the bottom of #data hits the center of the viewport
               scrub: true, // Smooth transition during scroll
