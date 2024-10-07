@@ -70,20 +70,20 @@ $(document).ready(function() {
         }
     })
 
-    // function DTCTTabloopDesktop() {
-    //     setTimeout(function() {
-    //         var $current = $('.dtct-tabs-menu').children('.w--current:first');
-    //         var $next = $current.next();
-    //         if ($next.length === 0) {
-    //             $next = $('.dtct-tabs-menu').children().first();
-    //         }
-    //         $next.removeAttr("href").trigger('click');
-    //         tabloop();
-    //     }, 10000);
-    // }
-   
-    // DTCTTabloopDesktop();
-    
+    function DTCTTabloopDesktop() {
+        setTimeout(function() {
+            var $current = $('.dtct-tabs-menu').children('.w--current:first');
+            var $next = $current.next();
+            if ($next.length === 0) {
+                $next = $('.dtct-tabs-menu').children().first();
+            }
+            $next.removeAttr("href").trigger('click');
+            DTCTTabloopDesktop();
+        }, 10000);
+    }
+    if (window.matchMedia("(min-width: 992px)").matches) {
+        DTCTTabloopDesktop();
+    }
 
     // function DTCTTabloopMobile() {
     //     setTimeout(function() {
