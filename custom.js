@@ -86,10 +86,7 @@ $(document).ready(function() {
     }
 
     $('.ac-first').trigger('click');
-
-    if (window.matchMedia("(max-width: 991px)").matches) {
-        $('#dtct-mobile-dropdown').trigger('click');
-    }
+    $('#dtct-mobile-dropdown').trigger('click');
 
     // function DTCTTabloopMobile() {
     //     setTimeout(function() {
