@@ -79,7 +79,7 @@ $(document).ready(function() {
             }
             $next.removeAttr("href").trigger('click');
             tabloop();
-        }, 5000);
+        }, 10000);
     }
     tabloop();
     
