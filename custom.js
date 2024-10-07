@@ -123,7 +123,21 @@ $(document).ready(function() {
 
 
     
-   
+
+    function dropdown() {
+        const dds = $(".header-nav-dropdown");
+        const nav_dds = $(this + " .main-nav-dd");
+        console.log(nav_dds.html())
+        dds.hover(
+            function () {
+                nav.addClass("hovering");
+            }, function () {
+                nav.removeClass("hovering");
+            }
+        );
+    }
+    
+    dropdown()
 });
 
 
