@@ -110,12 +110,12 @@ elements.forEach(({ selector, trigger }) => {
             { opacity: 0.5 }, 
             { 
                 opacity: 1, 
-                duration: 0.5, 
+                duration: 0.1, 
                 scrollTrigger: {
                     trigger: triggerElement, 
                     start: "top 65%",
                     end: "bottom 65%", 
-                    scrub: true, 
+                    // scrub: true, 
                     // markers: true, 
                     toggleActions: "play reset play reset", 
                     onLeave: () => gsap.set(element, { opacity: 0.5 }), 
