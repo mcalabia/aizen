@@ -173,7 +173,7 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
 
 // ANIMATION
 
-gsap.to(".Navbar", {
+gsap.to(".navbar", {
     duration: 0.5, // Duration of the slide-down animation
     y: 100,       // Moves the navbar 100px down
     ease: "power2.out", // Easing effect
