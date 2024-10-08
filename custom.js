@@ -114,7 +114,7 @@ elements.forEach(({ selector, trigger }) => {
                     start: "top 65%",
                     end: "bottom 65%", 
                     scrub: true, 
-                    markers: true, 
+                    // markers: true, 
                     toggleActions: "play reset play reset", 
                     onLeave: () => gsap.set(element, { opacity: 0.5 }), 
                     onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
