@@ -1,6 +1,5 @@
 $(document).ready(function() {
     
-
     $('.lc-owl-carousel').owlCarousel({
         margin:112,
         loop:true,
@@ -171,6 +170,14 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
         console.warn(`Privacy Policy Elements or trigger not found: ${selector} / ${trigger}`);
     }
 });
+
+// ANIMATION
+
+gsap.to(".Navbar", {
+    duration: 0.5, // Duration of the slide-down animation
+    y: 100,       // Moves the navbar 100px down
+    ease: "power2.out", // Easing effect
+  });
 
 
 });
