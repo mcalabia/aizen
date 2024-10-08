@@ -197,7 +197,7 @@ gsap.fromTo(".hero-description-block",
 
   gsap.fromTo(".logo-carousel-container", 
     { opacity: 0 }, 
-    { opacity: 1, duration: 1, delay: 1, ease: "power2.out" } 
+    { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" } 
   );
   
 });
