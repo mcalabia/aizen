@@ -160,7 +160,7 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
                     start: "top 35%",
                     end: "bottom 35%", 
                     // scrub: true, 
-                    markers: true, 
+                    // markers: true, 
                     toggleActions: "play reset play reset", 
                     onLeave: () => gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)"}), 
                     onLeaveBack: () => gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)"})
