@@ -154,7 +154,7 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
             { 
                 color: "var(--navy)", 
                 opacity: 1,
-                duration: 0.2, 
+                duration: 0, 
                 scrollTrigger: {
                     trigger: pptriggerElement, 
                     start: "top 25%",
