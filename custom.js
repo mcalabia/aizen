@@ -129,29 +129,6 @@ elements.forEach(({ selector, trigger }) => {
 
 
 
-function dropdown() {
-    const dds = $(".header-nav-dropdown");
-
-    // Attach hover events to each dropdown element
-    dds.each(function () {
-        const nav_dds = $(this).find(".dropdown-nav"); // Use 'this' to refer to the current dropdown element
-
-        nav_dds.hover(
-            function () {
-                $(this).addClass("hovering"); // Add class to the current nav_dds
-            },
-            function () {
-                $(this).removeClass("hovering"); // Remove class from the current nav_dds
-            }
-        );
-
-        console.log(nav_dds.html()); // Log the HTML of the current nav_dds
-    });
-}
-
-// Call the dropdown function
-dropdown();
-
 
 });
 
