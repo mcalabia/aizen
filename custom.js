@@ -84,9 +84,11 @@ $(document).ready(function() {
     if (window.matchMedia("(min-width: 992px)").matches) {
         DTCTTabloopDesktop();
     }
-
-    $('.ac-first').trigger('click');
-    $('div#dtct-mobile-dropdown').trigger('click');
+    setTimeout(function() {
+        $('.ac-first').trigger('click');
+        $('.dtct-mobile-dropdown-first').trigger('click');
+      }, 100); // Wait for 100ms before triggering the click, adjust if needed
+   
     
     gsap.registerPlugin(ScrollTrigger);
 
