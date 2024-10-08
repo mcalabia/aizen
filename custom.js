@@ -176,11 +176,13 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
 gsap.fromTo(".navbar", { 
     y: -100
      }, {
-    duration: 0.5, // Duration of the slide-down animation
-    y: 100,       // Moves the navbar 100px down
-    ease: "power2.out", // Easing effect
+    duration: 0.5, y: 100, ease: "power2.out", 
   });
 
+  gsap.fromTo(".hero-container", 
+    { opacity: 0 }, 
+    { opacity: 1, duration: 1, delay: 0.5, ease: "power2.out" } 
+  );
 
 });
 
