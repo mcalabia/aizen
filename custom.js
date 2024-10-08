@@ -145,7 +145,7 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
     
     // Check if both the element and its trigger exist
     if (ppelement && pptriggerElement) {
-        gsap.set(ppelement, { opacity: 0.35 });
+        gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)" });
 
         gsap.fromTo(ppelement, 
             { color: "rgba(21, 21, 21)",
