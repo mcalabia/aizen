@@ -157,8 +157,8 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
                 duration: 0.5, 
                 scrollTrigger: {
                     trigger: pptriggerElement, 
-                    start: "top center",
-                    end: "bottom center", 
+                    start: "top 25%",
+                    end: "bottom 25%", 
                     scrub: true, 
                     markers: true, 
                     toggleActions: "play reset play reset", 
