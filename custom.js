@@ -128,7 +128,42 @@ elements.forEach(({ selector, trigger }) => {
     }
 });
 
+// PRIVACY POLICY
+// Set initial opacity for elements
+const privacyPolicyElements = [
+    { selector: "#data", trigger: "#data-container" },
+    { selector: "#machine-learning", trigger: "#machine-learning-container" },
+    { selector: "#infrastructure", trigger: "#infrastructure-container" } // Fixed typo: "infastructure" to "infrastructure"
+];
 
+privacyPolicyElements.forEach(({ selector, trigger }) => {
+    const ppelement = document.querySelector(selector);
+    const pptriggerElement = document.querySelector(trigger);
+    
+    // Check if both the element and its trigger exist
+    if (ppelement && pptriggerElement) {
+        gsap.set(element, { opacity: 0.5 });
+        gsap.fromTo(element, 
+            { color: "rgba(21, 21, 21, 0.35)" }, 
+            { 
+                color: "var(--navy)", 
+                duration: 0.5, 
+                scrollTrigger: {
+                    trigger: pptriggerElement, 
+                    start: "top 65%",
+                    end: "bottom 65%", 
+                    scrub: true, 
+                    markers: true, 
+                    toggleActions: "play reset play reset", 
+                    onLeave: () => gsap.set(ppelement, { opacity: 0.5 }), 
+                    onLeaveBack: () => gsap.set(ppelement, { opacity: 0.5 })
+                }
+            }
+        );
+    } else {
+        console.warn(`Privacy Policy Elements or trigger not found: ${selector} / ${trigger}`);
+    }
+});
 
 
 });
