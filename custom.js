@@ -107,7 +107,6 @@ elements.forEach(({ selector, trigger }) => {
         gsap.fromTo(element, 
             { opacity: 0.5 }, 
             { 
-                padding: '8px', // Corrected padding syntax
                 opacity: 1, 
                 duration: 0.5, 
                 scrollTrigger: {
