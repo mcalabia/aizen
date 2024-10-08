@@ -131,9 +131,12 @@ elements.forEach(({ selector, trigger }) => {
 // PRIVACY POLICY
 // Set initial opacity for elements
 const privacyPolicyElements = [
-    { selector: "#data", trigger: "#data-container" },
-    { selector: "#machine-learning", trigger: "#machine-learning-container" },
-    { selector: "#infrastructure", trigger: "#infrastructure-container" } // Fixed typo: "infastructure" to "infrastructure"
+    { selector: "#TOC-M1", trigger: "#title1" },
+    { selector: "#TOC-M2", trigger: "#title2" },
+    { selector: "#TOC-M3", trigger: "#title3" },
+    { selector: "#TOC-M4", trigger: "#title4" },
+    { selector: "#TOC-M5", trigger: "#title5" },
+    { selector: "#TOC-M6", trigger: "#title6" }
 ];
 
 privacyPolicyElements.forEach(({ selector, trigger }) => {
