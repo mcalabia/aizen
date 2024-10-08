@@ -176,7 +176,7 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
 gsap.fromTo(".navbar", { 
     y: -100
      }, {
-    duration: 0.5, y: 100, ease: "power2.out", 
+    duration: 0.5, y: 0, ease: "power2.out", 
   });
 
   gsap.fromTo(".hero-container", 
