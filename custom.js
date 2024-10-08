@@ -86,7 +86,7 @@ $(document).ready(function() {
     }
 
     $('.ac-first').trigger('click');
-    $('.dtct-mobile-dropdown-first').trigger('click');
+    $('div#dtct-mobile-dropdown').trigger('click');
     
     gsap.registerPlugin(ScrollTrigger);
 
