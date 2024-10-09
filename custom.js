@@ -199,9 +199,19 @@ gsap.fromTo(".hero-description-block",
     { opacity: 0 }, 
     { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" } 
   );
-  
 
-  
+  gsap.to(".navbar", {
+    backgroundColor: "rgba(255, 253, 248, 0.80)",  // Target background color
+    backdropFilter: "blur(5.9px)",                 // Target blur effect
+    ease: "power2.out",                            // Easing for smooth transition
+    scrollTrigger: {
+      trigger: "body",       // The element that triggers the scroll effect (in this case, the whole page)
+      start: "top -50px",    // Trigger when the scroll position is 50px down
+      toggleActions: "play none none reverse", // When scrolling up, reverse the effect
+      scrub: true            // Smooth transition based on scroll progress
+    }
+});
+
 //   Reveal on scroll animation
 const splitTypes = document.querySelectorAll('.reveal-type')
 
