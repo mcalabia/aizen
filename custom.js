@@ -110,7 +110,7 @@ elements.forEach(({ selector, trigger }) => {
             { 
                 opacity: 1, 
                 padding: "8px 16px 8px 8px",
-                duration: 0.1, 
+                duration: 0.5, 
                 scrollTrigger: {
                     trigger: triggerElement, 
                     start: "top 65%",
