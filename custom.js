@@ -101,7 +101,7 @@ const elements = [
 elements.forEach(({ selector, trigger }) => {
     const element = document.querySelector(selector);
     const triggerElement = document.querySelector(trigger);
-    overline
+    
     // Check if both the element and its trigger exist
     if (element && triggerElement) {
         gsap.set(element, { opacity: 0.5 });
