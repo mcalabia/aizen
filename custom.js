@@ -101,7 +101,7 @@ const elements = [
 elements.forEach(({ selector, trigger }) => {
     const element = document.querySelector(selector);
     const triggerElement = document.querySelector(trigger);
-    
+    const overlineElement = element.querySelector(".overline");
     // Check if both the element and its trigger exist
     if (element && triggerElement) {
         gsap.set(element, { opacity: 0.5 });
@@ -124,7 +124,7 @@ elements.forEach(({ selector, trigger }) => {
             }
         );
 
-        gsap.to(element + ".overline", 
+        gsap.to(overlineElement, 
             { 
                 display: "block",
                 duration: 0.1, 
@@ -134,7 +134,9 @@ elements.forEach(({ selector, trigger }) => {
                     end: "bottom 65%", 
                     // scrub: true, 
                     // markers: true, 
-                    toggleActions: "play reset play reset"
+                    toggleActions: "play reset play reset", 
+                    onLeave: () => gsap.set(element, { opacity: 0.5 }), 
+                    onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
                 }
             }
         );
