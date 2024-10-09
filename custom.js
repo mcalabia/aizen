@@ -201,14 +201,14 @@ gsap.fromTo(".hero-description-block",
   );
 
   gsap.to(".navbar", {
-    backgroundColor: "rgba(255, 253, 248, 0.80)",  // Target background color
-    backdropFilter: "blur(5.9px)",                 // Target blur effect
-    ease: "power2.out",                            // Easing for smooth transition
+    backgroundColor: "rgba(255, 253, 248, 0.80)",
+    backdropFilter: "blur(5.9px)",               
+    ease: "power2.out",                           
     scrollTrigger: {
-      trigger: "body",       // The element that triggers the scroll effect (in this case, the whole page)
-      start: "top -50px",    // Trigger when the scroll position is 50px down
-      toggleActions: "play none none reverse", // When scrolling up, reverse the effect
-      scrub: true            // Smooth transition based on scroll progress
+      trigger: "body",       
+      start: "top -50px",  
+      toggleActions: "play none none reverse", 
+      scrub: true           
     }
 });
 
@@ -245,7 +245,6 @@ const splitTypes = document.querySelectorAll('.reveal-type')
         const lenis = new Lenis()
 
         lenis.on('scroll', (e) => {
-        console.log(e)
         })
 
         function raf(time) {
