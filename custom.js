@@ -141,7 +141,7 @@ $(document).ready(function() {
                 }
     
             } else {
-                console.warn(`Element or trigger not found: ${selector} / ${trigger}`);
+                // console.warn(`Element or trigger not found: ${selector} / ${trigger}`);
             }
         });
     }
@@ -186,7 +186,7 @@ function animatePrivacyPolicyElements(elements) {
                 }
             );
         } else {
-            console.warn(`Privacy Policy Element or trigger not found: ${selector} / ${trigger}`);
+            // console.warn(`Privacy Policy Element or trigger not found: ${selector} / ${trigger}`);
         }
     });
 }
