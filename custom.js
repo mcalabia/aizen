@@ -80,91 +80,118 @@ $(document).ready(function() {
             DTCTTabloopDesktop();
         }, 10000);
     }
-    if (window.matchMedia("(min-width: 992px)").matches) {
-        DTCTTabloopDesktop();
-    }
-    // setTimeout(function() {
-    //     $('.ac-first').trigger('click');
-    //     $('.dtct-mobile-dropdown-first').trigger('click');
-    //   }, 100); // Wait for 100ms before triggering the click, adjust if needed
-   
+    
+
     function triggerDropdownToggle(dropdownId) {
         const $dropdownToggle = $(dropdownId);
         if ($dropdownToggle.length) {
           $dropdownToggle.trigger('mousedown');
           setTimeout(function() {
             $dropdownToggle.trigger('mouseup');
-          }, 10); // A short delay ensures that events are distinguished
+          }, 10); 
         }
       }
       
-      // Usage:
-    triggerDropdownToggle('#first-ac');
-    triggerDropdownToggle('#dtct-mobile-dropdown');
-    
-      
-    
-gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-// Set initial opacity for elements
-const elements = [
-    { selector: "#data", trigger: "#data-container" },
-    { selector: "#machine-learning", trigger: "#machine-learning-container" },
-    { selector: "#infrastructure", trigger: "#infrastructure-container" } // Fixed typo: "infastructure" to "infrastructure"
-];
-
-elements.forEach(({ selector, trigger }) => {
-    const element = document.querySelector(selector);
-    const triggerElement = document.querySelector(trigger);
+    function animateElementsWithScroll(elements) {
+        elements.forEach(({ selector, trigger }) => {
+            const element = document.querySelector(selector);
+            const triggerElement = document.querySelector(trigger);
     
-    // Check if both the element and its trigger exist
-    if (element && triggerElement) {
-        const overlineElement = element.querySelector(".overline");
-        gsap.set(element, { opacity: 0.5 });
-        gsap.fromTo(element, 
-            { opacity: 0.5 }, 
-            { 
-                opacity: 1, 
-                padding: "8px 16px 8px 8px",
-                duration: 0.5, 
-                scrollTrigger: {
-                    trigger: triggerElement, 
-                    start: "top 65%",
-                    end: "bottom 65%", 
-                    // scrub: true, 
-                    // markers: true, 
-                    toggleActions: "play reset play reset", 
-                    onLeave: () => gsap.set(element, { opacity: 0.5 }), 
-                    onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
-                }
-            }
-        );
-        if(overlineElement){
-            gsap.to(overlineElement, 
-                { 
-                    display: "block",
-                    duration: 0.1, 
-                    scrollTrigger: {
-                        trigger: triggerElement, 
-                        start: "top 65%",
-                        end: "bottom 65%", 
-                        // scrub: true, 
-                        // markers: true, 
-                        toggleActions: "play reset play reset", 
-                        onLeave: () => gsap.set(element, { opacity: 0.5 }), 
-                        onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
+            // Check if both the element and its trigger exist
+            if (element && triggerElement) {
+                const overlineElement = element.querySelector(".overline");
+                gsap.set(element, { opacity: 0.5 });
+    
+                // Animate the main element
+                gsap.fromTo(element,
+                    { opacity: 0.5 },
+                    {
+                        opacity: 1,
+                        padding: "8px 16px 8px 8px",
+                        duration: 0.5,
+                        scrollTrigger: {
+                            trigger: triggerElement,
+                            start: "top 65%",
+                            end: "bottom 65%",
+                            toggleActions: "play reset play reset",
+                            onLeave: () => gsap.set(element, { opacity: 0.5 }),
+                            onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
+                        }
                     }
+                );
+    
+                // Animate the overline element if it exists
+                if (overlineElement) {
+                    gsap.to(overlineElement,
+                        {
+                            display: "block",
+                            duration: 0.1,
+                            scrollTrigger: {
+                                trigger: triggerElement,
+                                start: "top 65%",
+                                end: "bottom 65%",
+                                toggleActions: "play reset play reset",
+                                onLeave: () => gsap.set(element, { opacity: 0.5 }),
+                                onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
+                            }
+                        }
+                    );
                 }
-            );
-        }
-
-    } else {
-        console.warn(`Element or trigger not found: ${selector} / ${trigger}`);
+    
+            } else {
+                console.warn(`Element or trigger not found: ${selector} / ${trigger}`);
+            }
+        });
     }
-});
+    
+    // Example usage
+    const elements = [
+        { selector: "#data", trigger: "#data-container" },
+        { selector: "#machine-learning", trigger: "#machine-learning-container" },
+        { selector: "#infrastructure", trigger: "#infrastructure-container" } 
+    ];
+    
 
 // PRIVACY POLICY
 // Set initial opacity for elements
+
+function animatePrivacyPolicyElements(elements) {
+    elements.forEach(({ selector, trigger }) => {
+        const ppelement = document.querySelector(selector);
+        const pptriggerElement = document.querySelector(trigger);
+
+        // Check if both the element and its trigger exist
+        if (ppelement && pptriggerElement) {
+            gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)" });
+
+            gsap.fromTo(ppelement, 
+                { 
+                    color: "rgba(21, 21, 21)",
+                    opacity: 0.35
+                }, 
+                { 
+                    color: "var(--navy)", 
+                    opacity: 1,
+                    duration: 0.1, 
+                    scrollTrigger: {
+                        trigger: pptriggerElement, 
+                        start: "top 35%",
+                        end: "bottom 35%", 
+                        toggleActions: "play reset play reset", 
+                        onLeave: () => gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)" }), 
+                        onLeaveBack: () => gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)" })
+                    }
+                }
+            );
+        } else {
+            console.warn(`Privacy Policy Element or trigger not found: ${selector} / ${trigger}`);
+        }
+    });
+}
+
+// Example usage
 const privacyPolicyElements = [
     { selector: "#TOC-M1", trigger: "#title1" },
     { selector: "#TOC-M2", trigger: "#title2" },
@@ -174,122 +201,150 @@ const privacyPolicyElements = [
     { selector: "#TOC-M6", trigger: "#title6" }
 ];
 
-privacyPolicyElements.forEach(({ selector, trigger }) => {
-    const ppelement = document.querySelector(selector);
-    const pptriggerElement = document.querySelector(trigger);
-    
-    // Check if both the element and its trigger exist
-    if (ppelement && pptriggerElement) {
-        gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)" });
+// ANIMATION
+function initAnimations() {
+    // Navbar animation
+    gsap.fromTo(".navbar", 
+        { y: -100 }, 
+        { duration: 0.5, y: 0, ease: "power2.out" }
+    );
 
-        gsap.fromTo(ppelement, 
-            { color: "rgba(21, 21, 21)",
-            opacity: 0.35
-             }, 
-            { 
-                color: "var(--navy)", 
-                opacity: 1,
-                duration: 0.1, 
+    // Hero container animation
+    gsap.fromTo(".hero-container", 
+        { opacity: 0 }, 
+        { opacity: 1, duration: 1, ease: "power2.out" }
+    );
+
+    // Slide up the hero description block
+    gsap.fromTo(".hero-description-block", 
+        { y: 100, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 1, delay: 0.3, ease: "power2.out" }
+    );
+
+    // Slide up the hero image
+    gsap.fromTo(".hero-image", 
+        { y: 100, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 1, delay: 0.5, ease: "power2.out" }
+    );
+
+    // Logo carousel container animation
+    gsap.fromTo(".logo-carousel-container", 
+        { opacity: 0 }, 
+        { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" }
+    );
+
+    // Navbar background color change on scroll
+    gsap.to(".navbar", {
+        backgroundColor: "rgba(255, 253, 248, 0.80)",
+        backdropFilter: "blur(5.9px)",               
+        ease: "power2.out",                           
+        scrollTrigger: {
+            trigger: "body",        
+            start: "top -50px",   
+            toggleActions: "play none none reverse", 
+            scrub: true            
+        }
+    });
+}
+
+
+if (window.matchMedia("(min-width: 992px)").matches) {
+    DTCTTabloopDesktop();
+}
+triggerDropdownToggle('#first-ac');
+triggerDropdownToggle('.dtct-mobile-dropdown-first');
+animateElementsWithScroll(elements);
+animatePrivacyPolicyElements(privacyPolicyElements);
+initAnimations();
+
+//   Reveal on scroll animation
+function initRevealOnScroll() {
+    const splitTypes = document.querySelectorAll('.reveal-type');
+
+    splitTypes.forEach((char) => {
+        const bg = char.dataset.bgColor;
+        const fg = char.dataset.fgColor;
+
+        const text = new SplitType(char, { types: 'chars' });
+
+        gsap.fromTo(text.chars, 
+            {
+                color: bg,
+            },
+            {
+                color: fg,
+                duration: 0.3,
+                stagger: 0.02,
                 scrollTrigger: {
-                    trigger: pptriggerElement, 
-                    start: "top 35%",
-                    end: "bottom 35%", 
-                    // scrub: true, 
-                    // markers: true, 
-                    toggleActions: "play reset play reset", 
-                    onLeave: () => gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)"}), 
-                    onLeaveBack: () => gsap.set(ppelement, { opacity: 0.35, color: "rgba(21, 21, 21)"})
+                    trigger: char,
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    scrub: true,
+                    markers: false,
+                    toggleActions: 'play play reverse reverse'
                 }
             }
         );
-    } else {
-        // console.warn(`Privacy Policy Elements or trigger not found: ${selector} / ${trigger}`);
+    });
+
+    const lenis = new Lenis();
+
+    lenis.on('scroll', (e) => {});
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
     }
-});
 
-// ANIMATION
+    requestAnimationFrame(raf);
+}
+function initRevealOnScroll() {
+    const splitTypes = document.querySelectorAll('.reveal-type');
 
-gsap.fromTo(".navbar", { 
-    y: -100
-     }, {
-    duration: 0.5, y: 0, ease: "power2.out", 
-  });
+    splitTypes.forEach((char) => {
+        const bg = char.dataset.bgColor;
+        const fg = char.dataset.fgColor;
 
-  gsap.fromTo(".hero-container", 
-    { opacity: 0 }, 
-    { opacity: 1, duration: 1, ease: "power2.out" } 
-  );
-// Slide up the .hero-description-block
-gsap.fromTo(".hero-description-block", 
-    { y: 100, opacity: 0 }, 
-    { y: 0, opacity: 1, duration: 1, delay: 0.3, ease: "power2.out" } 
-  );
-  
-  // Slide up the .hero-image
-  gsap.fromTo(".hero-image", 
-    { y: 100, opacity: 0 },  
-    { y: 0, opacity: 1, duration: 1, delay: 0.5, ease: "power2.out" } 
-  );
+        const text = new SplitType(char, { types: 'chars' });
 
-  gsap.fromTo(".logo-carousel-container", 
-    { opacity: 0 }, 
-    { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" } 
-  );
+        gsap.fromTo(text.chars, 
+            {
+                color: bg,
+            },
+            {
+                color: fg,
+                duration: 0.3,
+                stagger: 0.02,
+                scrollTrigger: {
+                    trigger: char,
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    scrub: true,
+                    markers: false,
+                    toggleActions: 'play play reverse reverse'
+                }
+            }
+        );
+    });
 
-  gsap.to(".navbar", {
-    backgroundColor: "rgba(255, 253, 248, 0.80)",
-    backdropFilter: "blur(5.9px)",               
-    ease: "power2.out",                           
-    scrollTrigger: {
-      trigger: "body",       
-      start: "top -50px",  
-      toggleActions: "play none none reverse", 
-      scrub: true           
+    const lenis = new Lenis();
+
+    lenis.on('scroll', (e) => {});
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
     }
-});
 
-//   Reveal on scroll animation
-const splitTypes = document.querySelectorAll('.reveal-type')
+    requestAnimationFrame(raf);
+}
 
-        splitTypes.forEach((char,i) => {
-
-            const bg = char.dataset.bgColor
-            const fg = char.dataset.fgColor
-
-            const text = new SplitType(char, { types: 'chars'})
-
-            gsap.fromTo(text.chars, 
-                {
-                    color: bg,
-                },
-                {
-                    color: fg,
-                    duration: 0.3,
-                    stagger: 0.02,
-                    scrollTrigger: {
-                        trigger: char,
-                        start: 'top 80%',
-                        end: 'top 20%',
-                        scrub: true,
-                        markers: false,
-                        toggleActions: 'play play reverse reverse'
-                    }
-            })
-        })
-
-
-        const lenis = new Lenis()
-
-        lenis.on('scroll', (e) => {
-        })
-
-        function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
-
+triggerDropdownToggle('#first-ac');
+triggerDropdownToggle('.dtct-mobile-dropdown-first');
+animateElementsWithScroll(elements);
+animatePrivacyPolicyElements(privacyPolicyElements);
+initAnimations();
+initRevealOnScroll();
 
 });
 
