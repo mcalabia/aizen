@@ -191,7 +191,7 @@ function animatePrivacyPolicyElements(elements) {
     });
 }
 
-// Example usage
+
 const privacyPolicyElements = [
     { selector: "#TOC-M1", trigger: "#title1" },
     { selector: "#TOC-M2", trigger: "#title2" },
