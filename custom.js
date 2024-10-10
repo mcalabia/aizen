@@ -83,10 +83,10 @@ $(document).ready(function() {
     if (window.matchMedia("(min-width: 992px)").matches) {
         DTCTTabloopDesktop();
     }
-    setTimeout(function() {
-        $('.ac-first').trigger('click');
-        $('.dtct-mobile-dropdown-first').trigger('click');
-      }, 100); // Wait for 100ms before triggering the click, adjust if needed
+    // setTimeout(function() {
+    //     $('.ac-first').trigger('click');
+    //     $('.dtct-mobile-dropdown-first').trigger('click');
+    //   }, 100); // Wait for 100ms before triggering the click, adjust if needed
    
     
     gsap.registerPlugin(ScrollTrigger);
