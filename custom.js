@@ -123,23 +123,25 @@ elements.forEach(({ selector, trigger }) => {
                 }
             }
         );
-
-        gsap.to(overlineElement, 
-            { 
-                display: "block",
-                duration: 0.1, 
-                scrollTrigger: {
-                    trigger: triggerElement, 
-                    start: "top 65%",
-                    end: "bottom 65%", 
-                    // scrub: true, 
-                    // markers: true, 
-                    toggleActions: "play reset play reset", 
-                    onLeave: () => gsap.set(element, { opacity: 0.5 }), 
-                    onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
+        if(overlineElement){
+            gsap.to(overlineElement, 
+                { 
+                    display: "block",
+                    duration: 0.1, 
+                    scrollTrigger: {
+                        trigger: triggerElement, 
+                        start: "top 65%",
+                        end: "bottom 65%", 
+                        // scrub: true, 
+                        // markers: true, 
+                        toggleActions: "play reset play reset", 
+                        onLeave: () => gsap.set(element, { opacity: 0.5 }), 
+                        onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
+                    }
                 }
-            }
-        );
+            );
+        }
+
     } else {
         console.warn(`Element or trigger not found: ${selector} / ${trigger}`);
     }
