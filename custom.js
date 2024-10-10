@@ -88,8 +88,21 @@ $(document).ready(function() {
     //     $('.dtct-mobile-dropdown-first').trigger('click');
     //   }, 100); // Wait for 100ms before triggering the click, adjust if needed
    
+    function triggerDropdownToggle(dropdownId) {
+        const $dropdownToggle = $(dropdownId);
+        if ($dropdownToggle.length) {
+          $dropdownToggle.trigger('mousedown');
+          setTimeout(function() {
+            $dropdownToggle.trigger('mouseup');
+          }, 10); // A short delay ensures that events are distinguished
+        }
+      }
+      
+      // Usage:
+    triggerDropdownToggle('#first-ac');
+      
     
-    gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 // Set initial opacity for elements
 const elements = [
