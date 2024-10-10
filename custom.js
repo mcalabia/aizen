@@ -187,7 +187,7 @@ privacyPolicyElements.forEach(({ selector, trigger }) => {
             }
         );
     } else {
-        console.warn(`Privacy Policy Elements or trigger not found: ${selector} / ${trigger}`);
+        // console.warn(`Privacy Policy Elements or trigger not found: ${selector} / ${trigger}`);
     }
 });
 
