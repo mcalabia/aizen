@@ -100,6 +100,8 @@ $(document).ready(function() {
       
       // Usage:
     triggerDropdownToggle('#first-ac');
+    triggerDropdownToggle('#dtct-mobile-dropdown');
+    
       
     
 gsap.registerPlugin(ScrollTrigger);
