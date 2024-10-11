@@ -20,6 +20,7 @@ $(document).ready(function() {
         autoWidth:true,
         nav: false,
         autoplay:true,
+        items:8,
         autoplayTimeout:5000,
         autoplayHoverPause:false,
         slideTransition: 'linear',
