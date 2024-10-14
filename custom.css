@@ -9,6 +9,7 @@
 .cci-cards .owl-nav, .testimonial-owl-carousel .owl-nav{
     position: absolute;
     right: 0;
+    bottom: -20px;
 }
 .cci-cards .owl-dots, .testimonial-owl-carousel .owl-dots{
     text-align: center !important;
