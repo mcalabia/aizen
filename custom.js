@@ -360,32 +360,7 @@ function animateElementWithScrollTrigger(element, section, delay) {
     );
 }
 
-function animateGridCells(gridSelector, delay) {
-    const gridCells = document.querySelectorAll(gridSelector);
-    
-    gridCells.forEach((cell, index) => {
-      gsap.fromTo(
-        cell,
-        { y: 100, opacity: 0 }, 
-        {
-            y: 0, 
-            opacity: 1, 
-            duration: 1, 
-            delay: index * delay, // Delay based on the index
-            ease: "power2.out",
-            stagger: 0.3,
-            scrollTrigger: {
-                trigger: gridSelector,   
-                start: "top bottom", 
-                end: "bottom top",   
-                scrub: true          
-            }
-        }
-      );
-    });
-  }
-
-animateGridCells("._3-col-grid", 0.2);
+animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
 
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
