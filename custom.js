@@ -355,6 +355,7 @@ function animateElementWithScrollTrigger(element, section, delay) {
                 markers:true,
                 start: "top bottom", 
                 end: "bottom top",   
+                toggleActions: "play none none reverse",
                 // scrub: true          
             }
         }
