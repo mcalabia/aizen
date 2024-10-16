@@ -250,10 +250,12 @@ function initAnimations() {
     const sections = document.querySelectorAll(".section-animation");
     sections.forEach((section) => {
       gsap.fromTo(section, 
-        { y: 0 },  
-        { 
-          y: 50,   
-          ease: "none", 
+        { y: 100, opacity: 0 }, 
+        {
+        y: 0, 
+        opacity: 1, 
+        duration: 1, 
+        ease: "power2.out",
           scrollTrigger: {
             trigger: section,   
             start: "top bottom", 
