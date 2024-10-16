@@ -246,6 +246,26 @@ function initAnimations() {
             scrub: true            
         }
     });
+
+    const sections = document.querySelectorAll(".section-animation");
+    sections.forEach((section) => {
+      gsap.fromTo(section, 
+        { y: 0 },  
+        { 
+          y: 50,   
+          ease: "none", 
+          scrollTrigger: {
+            trigger: section,   
+            start: "top bottom", 
+            end: "bottom top",   
+            scrub: true          
+          }
+        }
+      );
+    });
+    
+
+
 }
 
 
