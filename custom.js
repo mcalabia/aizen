@@ -352,7 +352,7 @@ function animateElementWithScrollTrigger(element, section, delay) {
             ease: "power2.out",
             scrollTrigger: {
                 trigger: section,   
-                markers:true,
+                // markers:true,
                 start: "top bottom", 
                 end: "bottom top",
                 // scrub: true          
