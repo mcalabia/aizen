@@ -384,7 +384,7 @@ function animateGridCells(gridSelector, delay) {
     });
   }
 
-animateGridCells("._3-col-grid", 0);
+animateGridCells("._3-col-cell", 0);
 
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
