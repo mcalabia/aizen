@@ -360,7 +360,7 @@ function animateElementWithScrollTrigger(element, section, delay) {
     );
 }
 
-function animateGridCells(gridSelector, triggerSelector, delay) {
+function animateGridCells(gridSelector, delay) {
     const gridCells = document.querySelectorAll(gridSelector);
     
     gridCells.forEach((cell, index) => {
@@ -374,7 +374,7 @@ function animateGridCells(gridSelector, triggerSelector, delay) {
             delay: index * delay, // Delay based on the index
             ease: "power2.out",
             scrollTrigger: {
-                trigger: triggerSelector,   
+                trigger: gridSelector,   
                 start: "top bottom", 
                 end: "bottom top",   
                 scrub: true          
@@ -384,7 +384,7 @@ function animateGridCells(gridSelector, triggerSelector, delay) {
     });
   }
 
-animateGridCells("._3-col-cell", "_3-col-grid", 0);
+animateGridCells("._3-col-grid", 0.2);
 
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
