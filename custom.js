@@ -373,8 +373,9 @@ function animateGridCells(gridSelector, delay) {
             duration: 1, 
             delay: index * delay, // Delay based on the index
             ease: "power2.out",
+            stagger: 0.3,
             scrollTrigger: {
-                trigger: cell,   
+                trigger: gridSelector,   
                 start: "top bottom", 
                 end: "bottom top",   
                 scrub: true          
