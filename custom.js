@@ -353,7 +353,7 @@ function animateElementWithScrollTrigger(element, section, delay) {
             scrollTrigger: {
                 trigger: section,   
                 markers:true,
-                start: "top top", 
+                start: "top bottom", 
                 end: "bottom top",   
                 scrub: true          
             }
