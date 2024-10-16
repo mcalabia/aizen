@@ -343,7 +343,7 @@ function initRevealOnScroll() {
 
 function animateElementWithScrollTrigger(element, section, delay) {
     gsap.fromTo(element, 
-        { y: 100, opacity: 0.5 }, 
+        { y: 100, opacity: 0 }, 
         {
             y: 0, 
             opacity: 1, 
@@ -363,9 +363,9 @@ function animateElementWithScrollTrigger(element, section, delay) {
 animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
 animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", 0)
 animateElementWithScrollTrigger(".sntcc-sticky-nav", ".sntcc-sticky-nav", 0)
-animateElementWithScrollTrigger("#data-container", "#data-containerv", 0)
-
-
+animateElementWithScrollTrigger("#data-container", "#data-container", 0)
+animateElementWithScrollTrigger("#machine-learning-container", "#machine-learning-container", 0)
+animateElementWithScrollTrigger("#infrastructure-container", "#infrastructure-container", 0)
 
 
 triggerDropdownToggle('#first-ac');
