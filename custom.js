@@ -354,8 +354,8 @@ function animateElementWithScrollTrigger(element, section, delay) {
                 trigger: section,   
                 markers:true,
                 start: "top bottom", 
-                end: "bottom top"
-                // scrub: true          
+                end: "bottom top",
+                scrub: true          
             }
         }
     );
