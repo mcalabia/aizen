@@ -367,6 +367,10 @@ animateElementWithScrollTrigger("#data-container", "#data-container", 0)
 animateElementWithScrollTrigger("#machine-learning-container", "#machine-learning-container", 0)
 animateElementWithScrollTrigger("#infrastructure-container", "#infrastructure-container", 0)
 animateElementWithScrollTrigger(".cta-banner-block", ".cta-banner-block", 0)
+animateElementWithScrollTrigger(".five-cards-block", ".five-cards-block", 0)
+animateElementWithScrollTrigger(".five-cards-grid-1", ".five-cards-grid-1", 0)
+animateElementWithScrollTrigger(".five-cards-grid-2", ".five-cards-grid-2", 0)
+
 
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
