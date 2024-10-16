@@ -207,7 +207,7 @@ function initAnimations() {
     // Navbar animation
     gsap.fromTo(".navbar", 
         { y: -100 }, 
-        { duration: 0.5, y: 0, ease: "power2.out" }
+        { duration: 1, y: 0, ease: "power2.out" }
     );
 
     // Hero container animation
@@ -361,6 +361,10 @@ function animateElementWithScrollTrigger(element, section, delay) {
 }
 
 animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
+animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", 0)
+animateElementWithScrollTrigger(".sntcc-sticky-nav", ".sntcc-sticky-nav", 0.3)
+
+
 
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
