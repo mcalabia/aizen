@@ -366,13 +366,19 @@ function animateGridCells(gridSelector, delay) {
     gridCells.forEach((cell, index) => {
       gsap.fromTo(
         cell,
-        { y: 100, opacity: 0 },
+        { y: 100, opacity: 0 }, 
         {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: index * delay, // Delay based on the index
-          ease: "power2.out"
+            y: 0, 
+            opacity: 1, 
+            duration: 1, 
+            delay: index * delay, // Delay based on the index
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: gridSelector,   
+                start: "top bottom", 
+                end: "bottom top",   
+                scrub: true          
+            }
         }
       );
     });
