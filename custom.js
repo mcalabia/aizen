@@ -371,6 +371,14 @@ animateElementWithScrollTrigger(".cta-banner-block", ".cta-banner-block", 0)
 animateElementWithScrollTrigger(".five-cards-block", ".five-cards-block", 0)
 animateElementWithScrollTrigger(".five-cards-grid-1", ".five-cards-grid-1", 0)
 animateElementWithScrollTrigger(".five-cards-grid-2", ".five-cards-grid-2", 0)
+animateElementWithScrollTrigger(".text-image-block", ".text-image-block", 0)
+animateElementWithScrollTrigger(".cci-block", ".cci-block", 0)
+animateElementWithScrollTrigger(".owl-stage", ".owl-stage", 0)
+animateElementWithScrollTrigger(".testimonials-block", ".testimonials-block", 0)
+
+animateElementWithScrollTrigger(".resources-content", ".resources-content", 0)
+animateElementWithScrollTrigger(".resources-grid", ".resources-grid", 0)
+animateElementWithScrollTrigger(".global-cta-block", ".global-cta-block", 0)
 
 
 triggerDropdownToggle('#first-ac');
