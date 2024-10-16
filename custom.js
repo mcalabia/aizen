@@ -247,7 +247,6 @@ function initAnimations() {
         }
     });
 
-
 }
 
 
@@ -341,6 +340,45 @@ function initRevealOnScroll() {
 
     requestAnimationFrame(raf);
 }
+
+function animateElementWithScrollTrigger(element, section, delay) {
+    gsap.fromTo(element, 
+        { y: 100, opacity: 0 }, 
+        {
+            y: 0, 
+            opacity: 1, 
+            duration: 1, 
+            delay: delay,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: section,   
+                start: "top bottom", 
+                end: "bottom top",   
+                scrub: true          
+            }
+        }
+    );
+}
+
+function animateGridCells(gridSelector, delay) {
+    const gridCells = document.querySelectorAll(gridSelector);
+    
+    gridCells.forEach((cell, index) => {
+      gsap.fromTo(
+        cell,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: index * delay, // Delay based on the index
+          ease: "power2.out"
+        }
+      );
+    });
+  }
+
+animateGridCells("._3-col-grid", 0);
 
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
