@@ -255,6 +255,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 }
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
+triggerDropdownToggle('.solution-open');
+
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
 initAnimations();
