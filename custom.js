@@ -256,9 +256,9 @@ function initAnimations() {
 if (window.matchMedia("(min-width: 992px)").matches) {
     DTCTTabloopDesktop();
 }
-triggerDropdownToggle('#first-ac');
-triggerDropdownToggle('.dtct-mobile-dropdown-first');
-triggerDropdownToggle('.solution-open');
+// triggerDropdownToggle('#first-ac');
+// triggerDropdownToggle('.dtct-mobile-dropdown-first');
+// triggerDropdownToggle('.solution-open');
 
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
@@ -386,8 +386,6 @@ animateElementWithScrollTrigger(".resources-grid", ".resources-grid", 0)
 animateElementWithScrollTrigger(".global-cta-block", ".global-cta-block", 0)
 
 
-triggerDropdownToggle('#first-ac');
-triggerDropdownToggle('.dtct-mobile-dropdown-first');
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
 initAnimations();
