@@ -83,19 +83,6 @@ $(document).ready(function() {
     }
     
 
-    function triggerDropdownToggle(dropdownId) {
-        const $dropdownToggle = $(dropdownId);
-        console.log($dropdownToggle.length);
-        console.log($dropdownToggle)
-        if ($dropdownToggle.length) {
-        //   $dropdownToggle.trigger('mousedown');
-        //   setTimeout(function() {
-        //     $dropdownToggle.trigger('mouseup');
-        //   }, 10); 
-        $dropdownToggle.trigger('click'); 
-        }
-      }
-      
     gsap.registerPlugin(ScrollTrigger);
 
     function animateElementsWithScroll(elements) {
@@ -256,9 +243,6 @@ function initAnimations() {
 if (window.matchMedia("(min-width: 992px)").matches) {
     DTCTTabloopDesktop();
 }
-// triggerDropdownToggle('#first-ac');
-// triggerDropdownToggle('.dtct-mobile-dropdown-first');
-// triggerDropdownToggle('.solution-open');
 
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
