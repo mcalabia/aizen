@@ -255,7 +255,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 }
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
-triggerDropdownToggle('.solution-open');
+triggerDropdownToggle('.solutions-dropdown.solution-open.w-dropdown');
 
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
