@@ -86,6 +86,7 @@ $(document).ready(function() {
     function triggerDropdownToggle(dropdownId) {
         const $dropdownToggle = $(dropdownId);
         console.log($dropdownToggle.length);
+        console.log($dropdownToggle)
         if ($dropdownToggle.length) {
         //   $dropdownToggle.trigger('mousedown');
         //   setTimeout(function() {
