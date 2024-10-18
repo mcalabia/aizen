@@ -86,7 +86,7 @@ $(document).ready(function() {
     function triggerDropdownToggle(dropdownId) {
         const $dropdownToggle = $(dropdownId);
         console.log($dropdownToggle.length);
-        if ($dropdownToggle) {
+        if ($dropdownToggle.length) {
           $dropdownToggle.trigger('mousedown');
           setTimeout(function() {
             $dropdownToggle.trigger('mouseup');
@@ -256,7 +256,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 }
 triggerDropdownToggle('#first-ac');
 triggerDropdownToggle('.dtct-mobile-dropdown-first');
-triggerDropdownToggle('.solutions-dropdown.solution-open.w-dropdown');
+triggerDropdownToggle('.solution-open');
 
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
