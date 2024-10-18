@@ -87,10 +87,11 @@ $(document).ready(function() {
         const $dropdownToggle = $(dropdownId);
         console.log($dropdownToggle.length);
         if ($dropdownToggle.length) {
-          $dropdownToggle.trigger('mousedown');
-          setTimeout(function() {
-            $dropdownToggle.trigger('mouseup');
-          }, 10); 
+        //   $dropdownToggle.trigger('mousedown');
+        //   setTimeout(function() {
+        //     $dropdownToggle.trigger('mouseup');
+        //   }, 10); 
+        $dropdownToggle.trigger('click'); 
         }
       }
       
