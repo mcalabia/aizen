@@ -96,6 +96,7 @@ $(document).ready(function() {
                 gsap.set(element, { opacity: 0.5 });
     
                 // Animate the main element
+                if (element){
                 gsap.fromTo(element,
                     { opacity: 0.5 },
                     {
@@ -112,8 +113,10 @@ $(document).ready(function() {
                         }
                     }
                 );
+            }
     
                 // Animate the overline element if it exists
+                if (overlineElement){
                 if (overlineElement) {
                     gsap.to(overlineElement,
                         {
@@ -134,6 +137,7 @@ $(document).ready(function() {
             } else {
                 // console.warn(`Element or trigger not found: ${selector} / ${trigger}`);
             }
+        }
         });
     }
     
@@ -195,37 +199,43 @@ const privacyPolicyElements = [
 // ANIMATION
 function initAnimations() {
     // Navbar animation
-    gsap.fromTo(".navbar", 
+    const navbar = document.querySelector(".navbar");
+    gsap.fromTo(navbar, 
         { y: -100 }, 
         { duration: 1, y: 0, ease: "power2.out" }
     );
 
     // Hero container animation
-    gsap.fromTo(".hero-container", 
+    const hero_container = document.querySelector(".hero-container");
+    gsap.fromTo(hero_container, 
         { opacity: 0 }, 
         { opacity: 1, duration: 1, ease: "power2.out" }
     );
 
     // Slide up the hero description block
-    gsap.fromTo(".hero-description-block", 
+    const hero_description_block = document.querySelector(".hero-description-block");
+    gsap.fromTo(hero_description_block, 
         { y: 100, opacity: 0 }, 
         { y: 0, opacity: 1, duration: 1, delay: 0.3, ease: "power2.out" }
     );
 
     // Slide up the hero image
-    gsap.fromTo(".hero-image", 
+    const hero_image = document.querySelector(".hero-image");
+    gsap.fromTo(hero_image, 
         { y: 100, opacity: 0 }, 
         { y: 0, opacity: 1, duration: 1, delay: 0.5, ease: "power2.out" }
     );
 
     // Logo carousel container animation
-    gsap.fromTo(".logo-carousel-container", 
+    const logo_carousel_container = document.querySelector(".logo-carousel-container");
+    gsap.fromTo(logo_carousel_container, 
         { opacity: 0 }, 
         { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" }
     );
 
     // Navbar background color change on scroll
-    gsap.to(".navbar", {
+    const navbar2 = document.querySelector(".navbar");
+    gsap.to(navbar2, {
         backgroundColor: "rgba(255, 253, 248, 0.80)",
         backdropFilter: "blur(5.9px)",               
         ease: "power2.out",                           
