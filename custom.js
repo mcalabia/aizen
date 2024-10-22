@@ -200,41 +200,53 @@ const privacyPolicyElements = [
 function initAnimations() {
     // Navbar animation
     const navbar = document.querySelector(".navbar");
+    if(navbar){
     gsap.fromTo(navbar, 
         { y: -100 }, 
         { duration: 1, y: 0, ease: "power2.out" }
     );
+    }
+}
 
     // Hero container animation
     const hero_container = document.querySelector(".hero-container");
+    if(hero_container){
     gsap.fromTo(hero_container, 
         { opacity: 0 }, 
         { opacity: 1, duration: 1, ease: "power2.out" }
     );
+}
 
     // Slide up the hero description block
     const hero_description_block = document.querySelector(".hero-description-block");
+    if(hero_description_block){
     gsap.fromTo(hero_description_block, 
         { y: 100, opacity: 0 }, 
         { y: 0, opacity: 1, duration: 1, delay: 0.3, ease: "power2.out" }
     );
+}
 
     // Slide up the hero image
     const hero_image = document.querySelector(".hero-image");
+    if(hero_image){
     gsap.fromTo(hero_image, 
         { y: 100, opacity: 0 }, 
         { y: 0, opacity: 1, duration: 1, delay: 0.5, ease: "power2.out" }
     );
+}
 
     // Logo carousel container animation
     const logo_carousel_container = document.querySelector(".logo-carousel-container");
+    if(logo_carousel_container){
     gsap.fromTo(logo_carousel_container, 
         { opacity: 0 }, 
         { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" }
     );
+}
 
     // Navbar background color change on scroll
     const navbar2 = document.querySelector(".navbar");
+    if (navbar2){
     gsap.to(navbar2, {
         backgroundColor: "rgba(255, 253, 248, 0.80)",
         backdropFilter: "blur(5.9px)",               
@@ -246,6 +258,8 @@ function initAnimations() {
             scrub: true            
         }
     });
+}
+
 
 }
 
