@@ -341,8 +341,10 @@ function initRevealOnScroll() {
 }
 
 function animateElementWithScrollTrigger(element, section, delay) {
-    console.log(element);
-if(element){
+    const elementdata = document.querySelector(elementSelector);
+
+    console.log(elementdata);
+if(elementdata){
     gsap.fromTo(element, 
         { y: 100, opacity: 0 }, 
         {
