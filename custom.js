@@ -350,19 +350,19 @@ function animateElementWithScrollTrigger(element, section, delay) {
     );
 }
 
-function ACDropdownLoops() {
-    setTimeout(function() {
-        var $current = $('.accordion-dropdown-block').children('.ac-dropdown:first');
-        var $next = $current.next();
-        if ($next.length === 0) {
-            $next = $('.accordion-dropdown-block').children().first();
-        }
-        $next.trigger('click');
-        ACDropdownLoops();
-    }, 5000);
-}
+// function ACDropdownLoops() {
+//     setTimeout(function() {
+//         var $current = $('.accordion-dropdown-block').children('.ac-dropdown:first');
+//         var $next = $current.next();
+//         if ($next.length === 0) {
+//             $next = $('.accordion-dropdown-block').children().first();
+//         }
+//         $next.trigger('click');
+//         ACDropdownLoops();
+//     }, 5000);
+// }
 
-ACDropdownLoops();
+// ACDropdownLoops();
 animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
 animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", 0)
 animateElementWithScrollTrigger(".sntcc-sticky-nav", ".sntcc-sticky-nav", 0)
