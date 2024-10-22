@@ -341,6 +341,7 @@ function initRevealOnScroll() {
 }
 
 function animateElementWithScrollTrigger(element, section, delay) {
+if(element){
     gsap.fromTo(element, 
         { y: 100, opacity: 0 }, 
         {
@@ -358,6 +359,7 @@ function animateElementWithScrollTrigger(element, section, delay) {
             }
         }
     );
+}
 }
 
 // function ACDropdownLoops() {
