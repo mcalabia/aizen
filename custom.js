@@ -206,7 +206,6 @@ function initAnimations() {
         { duration: 1, y: 0, ease: "power2.out" }
     );
     }
-}
 
     // Hero container animation
     const hero_container = document.querySelector(".hero-container");
