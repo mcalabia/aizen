@@ -341,7 +341,7 @@ function initRevealOnScroll() {
 }
 
 function animateElementWithScrollTrigger(element, section, delay) {
-    const elementdata = document.querySelector(elementSelector);
+    const elementdata = document.querySelector(element);
 
     console.log(elementdata);
 if(elementdata){
