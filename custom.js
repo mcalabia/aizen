@@ -357,7 +357,7 @@ function ACDropdownLoops() {
         if ($next.length === 0) {
             $next = $('.accordion-dropdown-block').children().first();
         }
-        // $next.removeAttr("href").trigger('click');
+        $next.trigger('click');
         ACDropdownLoops();
     }, 5000);
 }
