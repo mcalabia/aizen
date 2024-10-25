@@ -51,7 +51,7 @@
     display: none;
 }
 .fcs-arrow{
-    display:inline-flex;
+    display:inline-flex!important;
 }
 
 @media (max-width: 767px) {
