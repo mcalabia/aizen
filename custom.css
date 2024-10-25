@@ -58,11 +58,15 @@
 }
 
 @media (max-width: 767px) {
-    .cci-cards .owl-nav, .testimonial-owl-carousel .owl-nav, .fcs-owl-carousel .owl-nav{
+    .cci-cards .owl-nav, .testimonial-owl-carousel .owl-nav{
         position: absolute;
         bottom: -28px;
     }
     .cci-cards .owl-dots, .testimonial-owl-carousel .owl-dots, .fcs-owl-carousel .owl-dots{
         width: 100% !important;
+    }
+    .fcs-owl-carousel .owl-nav{
+        position: absolute;
+        bottom: -60px;
     }
 }
