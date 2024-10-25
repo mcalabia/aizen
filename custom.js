@@ -71,7 +71,7 @@ $(document).ready(function() {
     })
 
     $('.fcs-owl-carousel').owlCarousel({
-        loop:false,
+        loop:true,
         items:1,
         nav:true,
         navText: [$('.t-arrow-left'),$('.t-arrow-right')],
