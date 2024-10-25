@@ -47,7 +47,12 @@
 .arrow-left:hover, .arrow-right:hover {
     opacity: 1;
 }
-
+.featured-customer-story .t-arrow-right, .featured-customer-story .t-arrow-left{
+    display: none;
+}
+.fcs-arrow{
+    display:inline-flex;
+}
 
 @media (max-width: 767px) {
     .cci-cards .owl-nav, .testimonial-owl-carousel .owl-nav, .fcs-owl-carousel .owl-nav{
