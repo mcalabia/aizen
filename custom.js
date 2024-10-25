@@ -70,6 +70,26 @@ $(document).ready(function() {
         }
     })
 
+    $('.fcs-owl-carousel').owlCarousel({
+        loop:false,
+        autoWidth:true,
+        items:1,
+        nav:true,
+        navText: [$('.t-arrow-left'),$('.t-arrow-right')],
+        rewindNav : true,
+        dots: true, 
+        dotsEach: true, 
+        responsiveClass:true,
+        responsive:{
+            0:{
+                autoWidth:false
+            },
+            991:{
+                autoWidth:true
+            }
+        }
+    })
+
     function DTCTTabloopDesktop() {
         setTimeout(function() {
             var $current = $('.dtct-tabs-menu').children('.w--current:first');
