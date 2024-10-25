@@ -22,12 +22,12 @@
     display: inline-block !important;
     width: 100% !important; /* Width of the bar */
     height: 4px !important;  /* Height of the bar */
-    background-color: #B4E3FF24 !important;
+    background-color: #010c5b24 !important;
     margin: 0 !important;
     transition: background-color 0.3s ease !important;
 }
 .fcs-owl-carousel .owl-dot{
-    background-color: #010c5b24 !important;
+    background-color: #B4E3FF24 !important;
 }
 .cci-cards .owl-dot.active , .testimonial-owl-carousel .owl-dot.active {
     background-color: #010b5b !important; /* Color of the active bar */
