@@ -356,8 +356,8 @@ $('.save-pdf-button').on('click', function() {
     html2pdf().set({
       margin: 0,
       filename: 'webpage.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
+      html2canvas: { scale: 3 },
+      image: { type: 'jpeg', quality: 1.0 },
       jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
     }).from(document.body).save().then(() => elementsToHide.show()); // Show elements after save
   });
