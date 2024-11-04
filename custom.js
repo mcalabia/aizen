@@ -375,6 +375,20 @@ $('.save-pdf-button').on('click', function() {
 // }
 
 // ACDropdownLoops();
+
+function copyCurrentLink(buttonClass) {
+    $(buttonClass).on('click', function() {
+      const currentLink = window.location.href; // Get the current page URL
+
+      navigator.clipboard.writeText(currentLink).then(() => {
+        alert('Current page link copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy link:', err);
+      });
+    });
+  }
+  
+copyCurrentLink('.copy-link-button');
 animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
 animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", 0)
 animateElementWithScrollTrigger(".sntcc-sticky-nav", ".sntcc-sticky-nav", 0)
