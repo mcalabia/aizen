@@ -350,7 +350,7 @@ if(elementdata){
 }
 
 $('.save-pdf-button').on('click', function() {
-    const elementsToHide = $('header, footer, .nav-content, .newsletter-subscription');
+    const elementsToHide = $('header, footer, .nav-content, .newsletter-subscription, .global-cta-section');
     elementsToHide.hide(); // Hide elements
 
     html2pdf().set({
