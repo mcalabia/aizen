@@ -353,6 +353,13 @@ $('.save-pdf-button').on('click', function() {
     window.print();
 });
 
+$('.linkedin-share-button').on('click', function(e) {
+    e.preventDefault();
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    $(this).attr('href', `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`);
+});
+
 // function ACDropdownLoops() {
 //     setTimeout(function() {
 //         var $current = $('.accordion-dropdown-block').children('.ac-dropdown:first');
