@@ -349,18 +349,36 @@ if(elementdata){
 }
 }
 
-$('.save-pdf-button').on('click', function() {
-    const elementsToHide = $('header, footer, .nav-content');
-    elementsToHide.hide(); // Hide elements
+// $('.save-pdf-button').on('click', function() {
+//     const elementsToHide = $('header, footer, .nav-content');
+//     elementsToHide.hide(); // Hide elements
 
-    html2pdf().set({
-      margin: 0,
-      filename: 'webpage.pdf',
-      html2canvas: { scale: 3 },
-      image: { type: 'jpeg', quality: 1.0 },
-      jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
-    }).from(document.body).save().then(() => elementsToHide.show()); // Show elements after save
-  });
+//     html2pdf().set({
+//       margin: 0,
+//       filename: 'webpage.pdf',
+//       html2canvas: { scale: 3 },
+//       image: { type: 'jpeg', quality: 1.0 },
+//       jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
+//     }).from(document.body).save().then(() => elementsToHide.show()); // Show elements after save
+
+
+
+    $('.save-pdf-button').on('click', function() {
+        // Select the entire body or a specific element to save
+        const element = document.body; // or use $('#yourElementID')[0];
+
+        // Options for html2pdf
+        const options = {
+            margin: 1,
+            filename: 'page.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        // Generate PDF
+        html2pdf().set(options).from(element).save();
+    });
 
 // function ACDropdownLoops() {
 //     setTimeout(function() {
