@@ -353,48 +353,14 @@ $('.save-pdf-button').on('click', function() {
     const elementsToHide = $('header, footer, .nav-content');
     elementsToHide.hide(); // Hide elements
 
-    // Wait until all images are loaded
-    const loadImages = () => {
-        return new Promise(resolve => {
-            let images = $('img');
-            let loadedImages = 0;
-
-            images.each(function() {
-                if (this.complete) {
-                    loadedImages++;
-                } else {
-                    $(this).on('load', () => {
-                        loadedImages++;
-                        if (loadedImages === images.length) {
-                            resolve();
-                        }
-                    }).on('error', () => {
-                        loadedImages++;
-                        if (loadedImages === images.length) {
-                            resolve();
-                        }
-                    });
-                }
-            });
-
-            if (loadedImages === images.length) {
-                resolve();
-            }
-        });
-    };
-
-    loadImages().then(() => {
-        // Generate PDF after all images are loaded
-        html2pdf().set({
-            margin: 0,
-            filename: 'webpage.pdf',
-            image: { type: 'jpeg', quality: 1.0 },
-            html2canvas: { scale: 3, useCORS: true },
-            jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
-        }).from(document.body).save().then(() => elementsToHide.show()); // Show elements after save
-    });
-});
-
+    html2pdf().set({
+      margin: 0,
+      filename: 'webpage.pdf',
+      html2canvas: { scale: 3 },
+      image: { type: 'jpeg', quality: 0.5 },
+      jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
+    }).from(document.body).save().then(() => elementsToHide.show()); // Show elements after save
+  });
 
 // function ACDropdownLoops() {
 //     setTimeout(function() {
