@@ -351,33 +351,47 @@ if(elementdata){
 
 $('.save-pdf-button').on('click', function() {
     const elementsToHide = $('header, footer, .nav-content');
+    elementsToHide.hide(); // Hide elements
 
-    // Wait for images to load before generating the PDF
-    const images = $('img');
-    const promises = images.map((_, img) => {
-        return new Promise((resolve) => {
-            if (img.complete) resolve();
-            else $(img).on('load', resolve).on('error', resolve); // Resolve on load or error
+    // Wait until all images are loaded
+    const loadImages = () => {
+        return new Promise(resolve => {
+            let images = $('img');
+            let loadedImages = 0;
+
+            images.each(function() {
+                if (this.complete) {
+                    loadedImages++;
+                } else {
+                    $(this).on('load', () => {
+                        loadedImages++;
+                        if (loadedImages === images.length) {
+                            resolve();
+                        }
+                    }).on('error', () => {
+                        loadedImages++;
+                        if (loadedImages === images.length) {
+                            resolve();
+                        }
+                    });
+                }
+            });
+
+            if (loadedImages === images.length) {
+                resolve();
+            }
         });
-    }).get();
+    };
 
-    // Once all images are loaded, generate the PDF
-    Promise.all(promises).then(() => {
-        elementsToHide.hide();
-
+    loadImages().then(() => {
+        // Generate PDF after all images are loaded
         html2pdf().set({
             margin: 0,
             filename: 'webpage.pdf',
-            html2canvas: { scale: 3 },
             image: { type: 'jpeg', quality: 1.0 },
+            html2canvas: { scale: 3, useCORS: true },
             jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
-        }).from(document.body)
-          .save()
-          .then(() => elementsToHide.show())
-          .catch((error) => {
-              console.error("PDF generation failed:", error);
-              elementsToHide.show();
-          });
+        }).from(document.body).save().then(() => elementsToHide.show()); // Show elements after save
     });
 });
 
