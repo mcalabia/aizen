@@ -350,17 +350,8 @@ if(elementdata){
 }
 
 $('.save-pdf-button').on('click', function() {
-    const elementsToHide = $('header, footer, .nav-content, .newsletter-subscription, .global-cta-section');
-    elementsToHide.hide(); // Hide elements
-
-    html2pdf().set({
-      margin: 0,
-      filename: 'webpage.pdf',
-      html2canvas: { scale: 3 },
-      image: { type: 'jpeg', quality: 0.5 },
-      jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
-    }).from(document.body).save().then(() => elementsToHide.show()); // Show elements after save
-  });
+    window.print();
+});
 
 // function ACDropdownLoops() {
 //     setTimeout(function() {
