@@ -56,6 +56,11 @@
 .fcs-arrow{
     display:inline-flex!important;
 }
+  select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+  }
 
 @media print {
     header, footer, .nav-content {
