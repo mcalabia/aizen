@@ -393,7 +393,8 @@ function copyCurrentLink(buttonClass) {
       }
   }
 
-  updateSelectOpacity();
+  updateSelectOpacity('.type-select-field');
+  updateSelectOpacity('.product-select-field');
   $('.type-select-field').on('change', function() {
       updateSelectOpacity('.type-select-field');
   });
