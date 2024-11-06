@@ -385,18 +385,21 @@ function copyCurrentLink(buttonClass) {
   
 
   // Function to update opacity based on select value
-  function updateSelectOpacity() {
-      if ($('.select-field').val() === "") {
-          $('.select-field').css('opacity', '0.5');
+  function updateSelectOpacity(className) {
+      if ($(className).val() === "") {
+          $(className).css('opacity', '0.5');
       } else {
-          $('.select-field').css('opacity', '1');
+          $(className).css('opacity', '1');
       }
   }
 
   updateSelectOpacity();
-  $('.select-field').on('change', function() {
-      updateSelectOpacity();
+  $('.type-select-field').on('change', function() {
+      updateSelectOpacity('.type-select-field');
   });
+  $('.product-select-field').on('change', function() {
+    updateSelectOpacity('.product-select-field');
+});
 
 copyCurrentLink('.copy-link-button');
 animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
