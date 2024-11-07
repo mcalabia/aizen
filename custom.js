@@ -404,9 +404,12 @@ function copyCurrentLink(buttonClass) {
 
 
 $(".gated-form-data").submit(function (e) { 
-    $('.gated-form, .gated-form-bg').hide();
-    console.log("Gated Form Submitted");
+    e.preventDefault();
+    $('.gated-form, .gated-form-bg').fadeOut("slow", function() {
+        console.log("Gated Form Submitted");
+    });
 });
+
 
 
 
