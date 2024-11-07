@@ -402,7 +402,7 @@ function copyCurrentLink(buttonClass) {
     updateSelectOpacity('.product-select-field');
 });
 
-$('.gated-form-success.w-form-done').on('show', function() {
+$('.w-form-done').on('show', function() {
     $('.gated-form, .gated-form-bg').hide();
     console.log("Gated Form Success")
 });
