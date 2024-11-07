@@ -402,9 +402,14 @@ function copyCurrentLink(buttonClass) {
     updateSelectOpacity('.product-select-field');
 });
 
-$('.w-form-done').on('show', function() {
-    $('.gated-form, .gated-form-bg').hide();
-    console.log("Gated Form Success")
+
+console.log($('.gated-form-success.w-form-done').html())
+$('.gated-form-success.w-form-done').on('DOMSubtreeModified', function() {
+    console.log("Modified")
+    if ($(this).is(":visible")) {
+        $('.gated-form, .gated-form-bg').hide();
+        console.log("Gated Form Success")
+    }
 });
 
 copyCurrentLink('.copy-link-button');
