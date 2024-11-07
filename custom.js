@@ -403,14 +403,13 @@ function copyCurrentLink(buttonClass) {
 });
 
 
-console.log($('.gated-form-success.w-form-done').html())
-$('.gated-form-success.w-form-done').on('DOMSubtreeModified', function() {
-    console.log("Modified")
-    if ($(this).is(":visible")) {
-        $('.gated-form, .gated-form-bg').hide();
-        console.log("Gated Form Success")
-    }
+$(".gated-form-data").submit(function (e) { 
+    $('.gated-form, .gated-form-bg').hide();
+    console.log("Gated Form Submitted");
 });
+
+
+
 
 copyCurrentLink('.copy-link-button');
 // animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
