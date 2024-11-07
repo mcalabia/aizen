@@ -403,17 +403,23 @@ function copyCurrentLink(buttonClass) {
 });
 
 
-$(".gated-form-data").submit(function (e) { 
-    e.preventDefault();
-    $('.gated-form, .gated-form-bg').fadeOut("slow", function() {
-        console.log("Gated Form Submitted");
+function handleFormSubmission() {
+    if (localStorage.getItem('formSubmitted') === 'true') {
+        $('.gated-form, .gated-form-bg').hide(); 
+    }
+    $(".gated-form-data").submit(function (e) { 
+        e.preventDefault(); 
+        $('.gated-form, .gated-form-bg').fadeOut("slow");
+        localStorage.setItem('formSubmitted', 'true');
+        setTimeout(function() {
+            localStorage.removeItem('formSubmitted');
+        }, 86400000); // 86400000 ms = 1 day
     });
-});
+}
 
 
 
-
-
+handleFormSubmission();
 copyCurrentLink('.copy-link-button');
 // animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
 // animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", 0)
