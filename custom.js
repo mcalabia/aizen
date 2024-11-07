@@ -402,6 +402,10 @@ function copyCurrentLink(buttonClass) {
     updateSelectOpacity('.product-select-field');
 });
 
+$('.gated-form-success.w-form-done').on('show', function() {
+    $('.gated-form, .gated-form-bg').hide();
+});
+
 copyCurrentLink('.copy-link-button');
 // animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
 // animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", 0)
