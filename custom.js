@@ -426,7 +426,7 @@ function handleFormSubmission() {
             {
                 y: 0, 
                 opacity: 1, 
-                duration: 1, 
+                duration: 0.2, 
                 delay: delay,
                 ease: "power2.out",
                 scrollTrigger: {
@@ -440,7 +440,7 @@ function handleFormSubmission() {
     }
 
   }
-  toggleFloatingBlock(".collection-list-3", ".search-block-floating", 0.3);
+  toggleFloatingBlock(".collection-list-3", ".search-block-floating", 0.1);
   
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
