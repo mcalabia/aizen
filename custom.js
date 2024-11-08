@@ -433,14 +433,15 @@ function handleFormSubmission() {
                     trigger: sectionClass,   
                     markers:true,
                     start: "top 120px",
-                    end: "bottom center"          
+                    end: "bottom center",
+                    toggleActions: "play none none reverse"      
                 }
             }
         );
     }
 
   }
-  toggleFloatingBlock(".collection-list-3", ".search-block-floating", 0.1);
+  toggleFloatingBlock(".collection-list-3", ".search-block-floating", 0);
   
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
