@@ -429,12 +429,12 @@ function toggleFloatingBlock(sectionClass, floatingClass) {
         markers: true
       },
       autoAlpha: 1,
-      duration: 0.5,
+      duration: 0.2,
       ease: "power1.out",
-      onEnter: () => gsap.set(floatingClass, { position: "fixed" }),
-      onLeave: () => gsap.set(floatingClass, { autoAlpha: 0 }),
-      onEnterBack: () => gsap.set(floatingClass, { autoAlpha: 1, position: "fixed" }),
-      onLeaveBack: () => gsap.set(floatingClass, { autoAlpha: 0 })
+      onEnter: () => gsap.set(floatingClass, { display: "block" }),
+      onLeave: () => gsap.set(floatingClass, { display: "none" }),
+      onEnterBack: () => gsap.set(floatingClass, { display: "block" }),
+      onLeaveBack: () => gsap.set(floatingClass, { display: "none" })
     });
   }
   
