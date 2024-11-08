@@ -430,12 +430,17 @@ function toggleFloatingBlock(sectionClass, floatingClass) {
       },
       autoAlpha: 1,
       duration: 0.5,
-      ease: "power1.out"
+      ease: "power1.out",
+      onEnter: () => gsap.set(floatingClass, { position: "fixed" }),
+      onLeave: () => gsap.set(floatingClass, { autoAlpha: 0 }),
+      onEnterBack: () => gsap.set(floatingClass, { autoAlpha: 1, position: "fixed" }),
+      onLeaveBack: () => gsap.set(floatingClass, { autoAlpha: 0 })
     });
   }
   
   // Usage example:
   toggleFloatingBlock(".collection-list-3", ".search-block-floating");
+  
   
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
