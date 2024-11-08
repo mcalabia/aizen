@@ -442,7 +442,21 @@ function handleFormSubmission() {
 
   }
   toggleFloatingBlock(".collection-list-3", ".search-block-floating", 0);
+  function syncSearchFields(class1, class2) {
+    $(document).ready(function() {
+      $(class1).on('input', function() {
+        var value = $(this).val();
+        $(class2).val(value);
+      });
   
+      $(class2).on('input', function() {
+        var value = $(this).val();
+        $(class1).val(value);
+      });
+    });
+  }
+  
+syncSearchFields('.search-field', '.search-field-floating-open');
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
 // animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
