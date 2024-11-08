@@ -417,8 +417,25 @@ function handleFormSubmission() {
     });
 }
 
-
-
+function toggleFloatingBlock(sectionClass, floatingClass) {
+    gsap.set(floatingClass, { autoAlpha: 0 });
+  
+    gsap.to(floatingClass, {
+      scrollTrigger: {
+        trigger: sectionClass,
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse",
+      },
+      autoAlpha: 1,
+      position: "fixed",
+      duration: 0.5,
+      ease: "power1.out"
+    });
+  }
+  
+  
+toggleFloatingBlock(".collection-list-3", ".search-block-floating");
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
 // animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
