@@ -433,8 +433,7 @@ function handleFormSubmission() {
                     trigger: sectionClass,   
                     markers:true,
                     start: "top bottom",
-                    end: "bottom center",
-                    scrub: true          
+                    end: "bottom center"          
                 }
             }
         );
