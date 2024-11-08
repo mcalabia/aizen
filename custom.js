@@ -426,10 +426,11 @@ function toggleFloatingBlock(sectionClass, floatingClass) {
         start: "top center",
         end: "bottom center",
         toggleActions: "play none none reverse",
+        markers: true
       },
       autoAlpha: 1,
       position: "fixed",
-      duration: 0.5,
+      duration: 0.3,
       ease: "power1.out"
     });
   }
