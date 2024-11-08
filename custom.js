@@ -429,14 +429,14 @@ function toggleFloatingBlock(sectionClass, floatingClass) {
         markers: true
       },
       autoAlpha: 1,
-      position: "fixed",
-      duration: 0.3,
+      duration: 0.5,
       ease: "power1.out"
     });
   }
   
+  // Usage example:
+  toggleFloatingBlock(".collection-list-3", ".search-block-floating");
   
-toggleFloatingBlock(".collection-list-3", ".search-block-floating");
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
 // animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
