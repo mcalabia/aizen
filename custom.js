@@ -434,7 +434,7 @@ function handleFormSubmission() {
                     markers:true,
                     start: "top 120px",
                     end: "bottom center",
-                    toggleActions: "play none none reverse"      
+                    toggleActions: "play reverse play reverse"      
                 }
             }
         );
