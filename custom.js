@@ -430,8 +430,7 @@ function handleFormSubmission() {
                 delay: delay,
                 ease: "power2.out",
                 scrollTrigger: {
-                    trigger: sectionClass,   
-                    markers:true,
+                    trigger: sectionClass, 
                     start: "top 120px",
                     end: "bottom center",
                     toggleActions: "play reverse play reverse"      
