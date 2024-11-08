@@ -431,7 +431,7 @@ function handleFormSubmission() {
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: sectionClass,   
-                    // markers:true,
+                    markers:true,
                     start: "top bottom", 
                     end: "bottom top",
                     scrub: true          
