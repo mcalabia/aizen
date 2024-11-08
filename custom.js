@@ -421,21 +421,25 @@ function handleFormSubmission() {
 
   function toggleFloatingBlock(sectionClass, floatingClass) {
   if (floatingClass) {
-    gsap.to(floatingClass,
-        {
-            display: "block",
-            duration: 0.1,
-            scrollTrigger: {
-                trigger: sectionClass,
-                start: "top 65%",
-                end: "bottom 65%",
-                toggleActions: "play reset play reset",
-                onLeave: () => gsap.set(element, { opacity: 0.5 }),
-                onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
+        gsap.fromTo(floatingClass, 
+            { y: 100, opacity: 0 }, 
+            {
+                y: 0, 
+                opacity: 1, 
+                duration: 1, 
+                delay: delay,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: sectionClass,   
+                    // markers:true,
+                    start: "top bottom", 
+                    end: "bottom top",
+                    scrub: true          
+                }
             }
-        }
         );
     }
+
   }
   toggleFloatingBlock(".collection-list-3", ".search-block-floating");
   
