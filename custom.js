@@ -432,8 +432,8 @@ function handleFormSubmission() {
                 scrollTrigger: {
                     trigger: sectionClass,   
                     markers:true,
-                    start: "top bottom", 
-                    end: "bottom top",
+                    start: "top bottom",
+                    end: "bottom center",
                     scrub: true          
                 }
             }
