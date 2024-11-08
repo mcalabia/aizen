@@ -417,30 +417,27 @@ function handleFormSubmission() {
     });
 }
 
-function toggleFloatingBlock(sectionClass, floatingClass) {
-    gsap.set(floatingClass, { autoAlpha: 0 });
-  
-    gsap.to(floatingClass, {
-      scrollTrigger: {
-        trigger: sectionClass,
-        start: "top center",
-        end: "bottom center",
-        toggleActions: "play none none reverse",
-        markers: true
-      },
-      autoAlpha: 1,
-      duration: 0.2,
-      ease: "power1.out",
-      onEnter: () => gsap.set(floatingClass, { display: "block" }),
-      onLeave: () => gsap.set(floatingClass, { display: "none" }),
-      onEnterBack: () => gsap.set(floatingClass, { display: "block" }),
-      onLeaveBack: () => gsap.set(floatingClass, { display: "none" })
-    });
+
+
+  function toggleFloatingBlock(sectionClass, floatingClass) {
+  if (floatingClass) {
+    gsap.to(floatingClass,
+        {
+            display: "block",
+            duration: 0.1,
+            scrollTrigger: {
+                trigger: sectionClass,
+                start: "top 65%",
+                end: "bottom 65%",
+                toggleActions: "play reset play reset",
+                onLeave: () => gsap.set(element, { opacity: 0.5 }),
+                onLeaveBack: () => gsap.set(element, { opacity: 0.5 })
+            }
+        }
+        );
+    }
   }
-  
-  // Usage example:
   toggleFloatingBlock(".collection-list-3", ".search-block-floating");
-  
   
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
