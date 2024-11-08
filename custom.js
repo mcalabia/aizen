@@ -419,7 +419,7 @@ function handleFormSubmission() {
 
 
 
-  function toggleFloatingBlock(sectionClass, floatingClass) {
+  function toggleFloatingBlock(sectionClass, floatingClass, delay) {
   if (floatingClass) {
         gsap.fromTo(floatingClass, 
             { y: 100, opacity: 0 }, 
@@ -441,7 +441,7 @@ function handleFormSubmission() {
     }
 
   }
-  toggleFloatingBlock(".collection-list-3", ".search-block-floating");
+  toggleFloatingBlock(".collection-list-3", ".search-block-floating", 0.3);
   
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
