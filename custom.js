@@ -53,7 +53,7 @@ $(document).ready(function() {
                 autoWidth: false, 
                 margin: 22,    
             },
-            768: {      
+            410: {      
                 items: 2,
                 autoWidth: true,
                 margin: 22,
