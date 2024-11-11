@@ -51,12 +51,12 @@ $(document).ready(function() {
             0: {    
                 items: 1,
                 autoWidth: false, 
-                margin: 0,    
+                margin: 22,    
             },
             768: {      
                 items: 2,
                 autoWidth: true,
-                margin: 15,
+                margin: 22,
             }
         }
     })
