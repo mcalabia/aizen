@@ -46,15 +46,8 @@ $(document).ready(function() {
         navText: [$('.arrow-left'),$('.arrow-right')],
         rewindNav : true,
         dots: true, 
-        dotsEach: true, 
-        responsive:{
-            0:{
-                autoWidth:false
-            },
-            767:{
-                autoWidth:true
-            }
-        }
+        dotsEach: true
+        
     })
 
     $('.testimonial-owl-carousel').owlCarousel({
