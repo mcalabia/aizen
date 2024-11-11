@@ -47,6 +47,14 @@ $(document).ready(function() {
         rewindNav : true,
         dots: true, 
         dotsEach: true, 
+        responsive:{
+            0:{
+                autoWidth:false
+            },
+            767:{
+                autoWidth:true
+            }
+        }
     })
 
     $('.testimonial-owl-carousel').owlCarousel({
