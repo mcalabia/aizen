@@ -520,6 +520,7 @@ animateElementWithScrollTrigger("#featured-2", "#featured-2", .3);
 animateElementWithScrollTrigger("#featured-3", "#featured-3", .3);
 animateElementWithScrollTrigger("#featured-4", "#featured-4", .3);
 animateElementWithScrollTrigger("#featured-5", "#featured-5", .3);
+animateElementWithScrollTrigger(".instruction-container", ".instruction-container", .3);
 
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
