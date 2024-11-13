@@ -512,8 +512,13 @@ animateElementWithScrollTrigger(".featured-resource-body", ".featured-resource-b
 animateElementWithScrollTrigger(".all-resources-filter", ".all-resources-filter", .3);
 animateElementWithScrollTrigger(".w-dyn-list", ".w-dyn-list", .3);
 
-animateElementWithScrollTrigger(".asas", ".asad", .3);
-animateElementWithScrollTrigger(".asas", ".asad", .3);
+animateElementWithScrollTrigger(".about-us-hero-container", ".about-us-hero-container", .3);
+animateElementWithScrollTrigger(".investor-logos-container", ".investor-logos-container", .3);
+animateElementWithScrollTrigger("._3-up-card-grid-section-content", "._3-up-card-grid-section-content", .3);
+animateElementWithScrollTrigger(".kpi-container", ".kpi-container", .3);
+animateElementWithScrollTrigger(".team-heading-content", ".team-heading-content", .3);
+animateElementWithScrollTrigger(".fitc-block", ".fitc-block", .3);
+// animateElementWithScrollTrigger(".asas", ".asad", .3);
 
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
