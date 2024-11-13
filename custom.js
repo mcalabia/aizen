@@ -263,14 +263,15 @@ function initAnimations() {
         { opacity: 0 }, 
         { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" }
     );
+}
 
-    // thin-banner-section animation
-    const thin_banner_section = document.querySelector(".thin-banner-section");
-    if(thin_banner_section){
-    gsap.fromTo(thin_banner_section, 
-        { opacity: 0 }, 
-        { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" }
-    );
+ // thin-banner-section animation
+ const thin_banner_section = document.querySelector(".thin-banner-section");
+ if(thin_banner_section){
+ gsap.fromTo(thin_banner_section, 
+     { opacity: 0 }, 
+     { opacity: 1, duration: 1, delay: 0.8, ease: "power2.out" }
+ );
 }
 
     // Navbar background color change on scroll
