@@ -347,8 +347,6 @@ function initRevealOnScroll() {
 }
 
 
-// Call the function
-animateHeroImageOnScroll();
 
 
 
