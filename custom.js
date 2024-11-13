@@ -473,7 +473,7 @@ function handleFormSubmission() {
 syncSearchFields('.search-field', '.search-field-floating-open');
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
-animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", 0)
+animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", .3)
 // animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", 0)
 // animateElementWithScrollTrigger(".sntcc-sticky-nav", ".sntcc-sticky-nav", 0)
 // animateElementWithScrollTrigger("#data-container", "#data-container", 0)
