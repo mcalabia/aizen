@@ -266,7 +266,7 @@ function initAnimations() {
 }
 
  // thin-banner-section animation
- const thin_banner_section = document.querySelector(".thin-banner-section");
+ const thin_banner_section = document.querySelector(".thin-banner-block");
  if(thin_banner_section){
  gsap.fromTo(thin_banner_section, 
      { opacity: 0 }, 
