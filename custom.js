@@ -506,10 +506,12 @@ animateElementWithScrollTrigger(".logo-cards-data", ".logo-cards-data", .3);
 animateElementWithScrollTrigger(".logo-cards-grid", ".logo-cards-grid", .3);
 animateElementWithScrollTrigger("._3-up-card-grid-section-content", "._3-up-card-grid-section-content", .3);
 animateElementWithScrollTrigger("._3-up-card-grid-section-grid", "._3-up-card-grid-section-grid", .3);
-animateElementWithScrollTrigger(".featured-resource-container", ".featured-resource-container", .3);
+
+animateElementWithScrollTrigger(".featured-resource-title-block", ".featured-resource-title-block", .3);
+animateElementWithScrollTrigger(".featured-resource-body", ".featured-resource-body", .3);
 animateElementWithScrollTrigger(".all-resources-filter", ".all-resources-filter", .3);
 animateElementWithScrollTrigger(".w-dyn-list", ".w-dyn-list", .3);
-animateElementWithScrollTrigger(".asas", ".asad", .3);
+
 animateElementWithScrollTrigger(".asas", ".asad", .3);
 animateElementWithScrollTrigger(".asas", ".asad", .3);
 
