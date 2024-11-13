@@ -354,7 +354,7 @@ if(elementdata){
             ease: "power2.out",
             scrollTrigger: {
                 trigger: section,   
-                markers:true,
+                // markers:true,
                 start: "top bottom", 
                 end: "bottom top",
                 toggleActions: "play none none reverse"       
