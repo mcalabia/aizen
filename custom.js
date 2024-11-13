@@ -504,7 +504,14 @@ animateElementWithScrollTrigger(".solutions-content-block", ".solutions-content-
 animateElementWithScrollTrigger(".solutions-accordion", ".solutions-accordion", .3);
 animateElementWithScrollTrigger(".logo-cards-data", ".logo-cards-data", .3);
 animateElementWithScrollTrigger(".logo-cards-grid", ".logo-cards-grid", .3);
-// animateElementWithScrollTrigger(".asas", ".asad", .3);
+animateElementWithScrollTrigger("._3-up-card-grid-section-content", "._3-up-card-grid-section-content", .3);
+animateElementWithScrollTrigger("._3-up-card-grid-section-grid", "._3-up-card-grid-section-grid", .3);
+animateElementWithScrollTrigger(".featured-resource-container", ".featured-resource-container", .3);
+animateElementWithScrollTrigger(".asas", ".asad", .3);
+animateElementWithScrollTrigger(".asas", ".asad", .3);
+animateElementWithScrollTrigger(".asas", ".asad", .3);
+animateElementWithScrollTrigger(".asas", ".asad", .3);
+animateElementWithScrollTrigger(".asas", ".asad", .3);
 
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
