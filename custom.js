@@ -473,32 +473,38 @@ function handleFormSubmission() {
 syncSearchFields('.search-field', '.search-field-floating-open');
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
-animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", .3)
-animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", .3)
-animateElementWithScrollTrigger(".sntcc-sticky-nav", ".sntcc-sticky-nav", .3)
-animateElementWithScrollTrigger("#data-container", "#data-container", .3)
-animateElementWithScrollTrigger("#machine-learning-container", "#machine-learning-container", .3)
-animateElementWithScrollTrigger("#infrastructure-container", "#infrastructure-container", .3)
-animateElementWithScrollTrigger(".cta-banner-block", ".cta-banner-block", .3)
-animateElementWithScrollTrigger(".five-cards-block", ".five-cards-block", .3)
-animateElementWithScrollTrigger(".five-cards-grid-1", ".five-cards-grid-1", .3)
-animateElementWithScrollTrigger(".five-cards-grid-2", ".five-cards-grid-2", .3)
-animateElementWithScrollTrigger(".text-image-block", ".text-image-block", .3)
-animateElementWithScrollTrigger(".cci-block", ".cci-block", .3)
-animateElementWithScrollTrigger(".cci-cards", ".cci-cards", .3)
-animateElementWithScrollTrigger(".testimonials-block", ".testimonials-block", .3)
-animateElementWithScrollTrigger(".testimonials-cards-block", ".testimonials-cards-block", .3)
-animateElementWithScrollTrigger(".resources-content", ".resources-content", .3)
-animateElementWithScrollTrigger(".resources-grid", ".resources-grid", .3)
-animateElementWithScrollTrigger(".global-cta-block", ".global-cta-block", .3)
-animateElementWithScrollTrigger(".diagram-with-tabs-content-block", ".diagram-with-tabs-content-block", .3)
-animateElementWithScrollTrigger(".diagram-with-tabs-content-tabs", ".diagram-with-tabs-content-tabs", .3)
-animateElementWithScrollTrigger(".accordion-block", ".accordion-block", .3)
-animateElementWithScrollTrigger(".feature-content-container", ".feature-content-container", .3)
-animateElementWithScrollTrigger(".text-with-logo-carousel-contentent", ".text-with-logo-carousel-contentent", .3)
-animateElementWithScrollTrigger(".testimonial-cards-block", ".testimonial-cards-block", .3)
+animateElementWithScrollTrigger("._3-col-grid", "._3-col-grid", .3);
+animateElementWithScrollTrigger(".sntcc-block", ".sntcc-block", .3);
+animateElementWithScrollTrigger(".sntcc-sticky-nav", ".sntcc-sticky-nav", .3);
+animateElementWithScrollTrigger("#data-container", "#data-container", .3);
+animateElementWithScrollTrigger("#machine-learning-container", "#machine-learning-container", .3);
+animateElementWithScrollTrigger("#infrastructure-container", "#infrastructure-container", .3);
+animateElementWithScrollTrigger(".cta-banner-block", ".cta-banner-block", .3);
+animateElementWithScrollTrigger(".five-cards-block", ".five-cards-block", .3);
+animateElementWithScrollTrigger(".five-cards-grid-1", ".five-cards-grid-1", .3);
+animateElementWithScrollTrigger(".five-cards-grid-2", ".five-cards-grid-2", .3);
+animateElementWithScrollTrigger(".text-image-block", ".text-image-block", .3);
+animateElementWithScrollTrigger(".cci-block", ".cci-block", .3);
+animateElementWithScrollTrigger(".cci-cards", ".cci-cards", .3);
+animateElementWithScrollTrigger(".testimonials-block", ".testimonials-block", .3);
+animateElementWithScrollTrigger(".testimonials-cards-block", ".testimonials-cards-block", .3);
+animateElementWithScrollTrigger(".resources-content", ".resources-content", .3);
+animateElementWithScrollTrigger(".resources-grid", ".resources-grid", .3);
+animateElementWithScrollTrigger(".global-cta-block", ".global-cta-block", .3);
+animateElementWithScrollTrigger(".diagram-with-tabs-content-block", ".diagram-with-tabs-content-block", .3);
+animateElementWithScrollTrigger(".diagram-with-tabs-content-tabs", ".diagram-with-tabs-content-tabs", .3);
+animateElementWithScrollTrigger(".accordion-block", ".accordion-block", .3);
+animateElementWithScrollTrigger(".feature-content-container", ".feature-content-container", .3);
+animateElementWithScrollTrigger(".text-with-logo-carousel-contentent", ".text-with-logo-carousel-contentent", .3);
+animateElementWithScrollTrigger(".testimonial-cards-block", ".testimonial-cards-block", .3);
 
-
+animateElementWithScrollTrigger(".feature-section-content-block", ".feature-section-content-block", .3);
+animateElementWithScrollTrigger(".feature-section-grid", ".feature-section-grid", .3);
+animateElementWithScrollTrigger(".solutions-content-block", ".solutions-content-block", .3);
+animateElementWithScrollTrigger(".solutions-accordion", ".solutions-accordion", .3);
+animateElementWithScrollTrigger(".logo-cards-data", ".logo-cards-data", .3);
+animateElementWithScrollTrigger(".logo-cards-grid", ".logo-cards-grid", .3);
+// animateElementWithScrollTrigger(".asas", ".asad", .3);
 
 animateElementsWithScroll(elements);
 animatePrivacyPolicyElements(privacyPolicyElements);
