@@ -357,7 +357,7 @@ if(elementdata){
                 markers:true,
                 start: "top bottom", 
                 end: "bottom top",
-                toggleActions: "play reverse play reverse"       
+                toggleActions: "play none none reverse"       
             }
         }
     );
