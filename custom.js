@@ -303,7 +303,6 @@ animatePrivacyPolicyElements(privacyPolicyElements);
 initAnimations();
 
 //   Reveal on scroll animation
-
 function initRevealOnScroll() {
     const splitTypes = document.querySelectorAll('.reveal-type');
 
@@ -347,6 +346,12 @@ function initRevealOnScroll() {
     requestAnimationFrame(raf);
 }
 
+
+// Call the function
+animateHeroImageOnScroll();
+
+
+
 function animateElementWithScrollTrigger(element, section, delay) {
     const elementdata = document.querySelector(element);
 if(elementdata){
@@ -360,10 +365,10 @@ if(elementdata){
             ease: "power2.out",
             scrollTrigger: {
                 trigger: section,   
-                // markers:true,
+                markers:true,
                 start: "top bottom", 
                 end: "bottom top",
-                scrub: true          
+                toggleActions: "play reverse play reverse"       
             }
         }
     );
