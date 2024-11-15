@@ -470,11 +470,10 @@ function handleFormSubmission() {
     });
   }
   
-$(".ac-dropdown").click(function (e) { 
-    const imageSrc = $(".accordion-image-data").attr("src");
-    console.log(imageSrc); // Logs the URL of the image
+  $(".ac-dropdown").click(function (e) {
+    const imageSrc = $(this).find(".accrordion-image-data").attr("src");
+    console.log(imageSrc); // Logs the image URL for the clicked dropdown
 });
-
 
 syncSearchFields('.search-field', '.search-field-floating-open');
 handleFormSubmission();
