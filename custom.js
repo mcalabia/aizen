@@ -470,6 +470,12 @@ function handleFormSubmission() {
     });
   }
   
+$("ac-dropdown").click(function (e) { 
+    const imageSrc = $(".accordion-image-data").attr("src");
+    console.log(imageSrc); // Logs the URL of the image
+});
+
+
 syncSearchFields('.search-field', '.search-field-floating-open');
 handleFormSubmission();
 copyCurrentLink('.copy-link-button');
