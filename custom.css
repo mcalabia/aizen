@@ -73,9 +73,6 @@
     opacity: 1;
   }
   
-  .ac-image[srcset], .ac-image[src] {
-    opacity: 0;
-  }
   
 
 @media print {
