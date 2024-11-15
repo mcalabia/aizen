@@ -68,6 +68,16 @@
     -moz-appearance: none !important;
   }
 
+  .ac-image {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  .ac-image[srcset], .ac-image[src] {
+    opacity: 0;
+  }
+  
+
 @media print {
     header, footer, .nav-content {
         display: none;
