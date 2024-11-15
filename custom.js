@@ -533,11 +533,17 @@ initRevealOnScroll();
 
 $(".ac-dropdown").click(function (e) {
     const imageSrc = $(this).find(".accordion-image-data").attr("src"); // Get the source URL
-    console.log("Image Source:", imageSrc); // Log the source URL for debugging
+    const imageSrcset = $(this).find(".accordion-image-data").attr("srcset"); // Get the srcset URL
 
-    $(".ac-image").attr("src", imageSrc); // Apply the URL to the target image
-    console.log("Updated .ac-image src to:", imageSrc); // Log the update confirmation
+    console.log("Image Source:", imageSrc); // Log the source URL for debugging
+    console.log("Image Srcset:", imageSrcset); // Log the srcset URL for debugging
+
+    $(".ac-image").attr("src", imageSrc); // Update the src
+    $(".ac-image").attr("srcset", imageSrcset); // Update the srcset
+    console.log("Updated .ac-image src to:", imageSrc); // Log the update confirmation for src
+    console.log("Updated .ac-image srcset to:", imageSrcset); // Log the update confirmation for srcset
 });
+
 
 });
 
