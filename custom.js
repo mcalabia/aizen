@@ -470,7 +470,7 @@ function handleFormSubmission() {
     });
   }
   
-$("ac-dropdown").click(function (e) { 
+$(".ac-dropdown").click(function (e) { 
     const imageSrc = $(".accordion-image-data").attr("src");
     console.log(imageSrc); // Logs the URL of the image
 });
