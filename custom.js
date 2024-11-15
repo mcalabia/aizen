@@ -370,19 +370,19 @@ $('.save-pdf-button').on('click', function() {
 
 
 
-// function ACDropdownLoops() {
-//     setTimeout(function() {
-//         var $current = $('.accordion-dropdown-block').children('.ac-dropdown:first');
-//         var $next = $current.next();
-//         if ($next.length === 0) {
-//             $next = $('.accordion-dropdown-block').children().first();
-//         }
-//         $next.trigger('click');
-//         ACDropdownLoops();
-//     }, 5000);
-// }
+function ACDropdownLoops() {
+    setTimeout(function() {
+        var $current = $('.accordion-dropdown-block').children('.ac-dropdown:first');
+        var $next = $current.next();
+        if ($next.length === 0) {
+            $next = $('.accordion-dropdown-block').children().first();
+        }
+        $next.trigger('click');
+        ACDropdownLoops();
+    }, 5000);
+}
 
-// ACDropdownLoops();
+ACDropdownLoops();
 
 function copyCurrentLink(buttonClass) {
     $(buttonClass).on('click', function() {
