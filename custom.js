@@ -471,17 +471,16 @@ function handleFormSubmission() {
   }
   
 
-    let debounceTimer; 
-    $('.search-field').on('input', function () {
-      debounceTimer = setTimeout(function () {
-        if ($('.collection-list-3').css('display') === 'none') {
+
+    $('.search-field').on('keyup', function () {
+      if ($('.collection-list-3').css('display') === 'none') {
           console.log('no result');
           $(".no-result").css('display', 'block');
         } else {
             $(".no-result").css('display', 'none');
         }
     });
-  });
+  
   
   
 
