@@ -472,18 +472,15 @@ function handleFormSubmission() {
   
 
   $(document).ready(function () {
-    let debounceTimer; // Timer for debounce
-  
-    // Trigger event when typing in .search-field
+    let debounceTimer; 
     $('.search-field').on('input', function () {
-      clearTimeout(debounceTimer); // Clear any existing timer
-  
       debounceTimer = setTimeout(function () {
-        // Check if the target div has display: none
         if ($('.collection-list-3').css('display') === 'none') {
           console.log('no result');
+          $(".no-result").css('display', 'block');
+        } else {
+            $(".no-result").css('display', 'none');
         }
-      }, 300); // Delay in milliseconds (e.g., 300ms)
     });
   });
   
