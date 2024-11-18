@@ -470,6 +470,12 @@ function handleFormSubmission() {
     });
   }
   
+
+    $('.search-field').on('input', function () {
+      if ($('.collection-list-3').css('display') === 'none') {
+        console.log('no result');
+      }
+    });
   
 
 
