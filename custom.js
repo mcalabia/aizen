@@ -477,9 +477,9 @@ function handleFormSubmission() {
       debounceTimer = setTimeout(function () {
         if ($('.collection-list-3').css('display') === 'none') {
           console.log('no result');
-          $(".no-result").css('display', 'block');
+          $(".no-result").css('display', 'block!important');
         } else {
-            $(".no-result").css('display', 'none');
+            $(".no-result").css('display', 'none!important');
         }
     });
   });
