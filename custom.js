@@ -471,17 +471,20 @@ function handleFormSubmission() {
   }
   
 
+let typingTimer;
+const delay = 600;
 
-    $('.search-field').on('keyup', function () {
-      if ($('.collection-list-3').css('display') === 'none') {
-          console.log('no result');
-          $(".no-result").css('display', 'block');
-        } else {
-            $(".no-result").css('display', 'none');
-        }
-    });
-  
-  
+$('.search-field').on('keyup', function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(function () {
+    if ($('.collection-list-3').css('display') === 'none') {
+      console.log('no result');
+      $(".no-result").css('display', 'block');
+    } else {
+      $(".no-result").css('display', 'none');
+    }
+  }, delay);
+});
   
 
 
