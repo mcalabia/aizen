@@ -51,7 +51,7 @@ $(document).ready(function() {
             0: {    
                 items: 2,
                 autoWidth: true, 
-                margin: 22,    
+                margin: 16,    
             },
             410: {      
                 items: 2,
