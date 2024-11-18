@@ -471,15 +471,14 @@ function handleFormSubmission() {
   }
   
 
-  $(document).ready(function () {
     let debounceTimer; 
     $('.search-field').on('input', function () {
       debounceTimer = setTimeout(function () {
         if ($('.collection-list-3').css('display') === 'none') {
           console.log('no result');
-          $(".no-result").css('display', 'block!important');
+          $(".no-result").css('display', 'block');
         } else {
-            $(".no-result").css('display', 'none!important');
+            $(".no-result").css('display', 'none');
         }
     });
   });
