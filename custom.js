@@ -472,7 +472,7 @@ function handleFormSubmission() {
   
 
 let typingTimer;
-const delay = 600;
+const delay = 300;
 
 $('.search-field').on('keyup', function () {
   clearTimeout(typingTimer);
