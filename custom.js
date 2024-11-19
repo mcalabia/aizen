@@ -425,12 +425,24 @@ function handleFormSubmission() {
     $(".gated-form-data").submit(function (e) { 
         e.preventDefault(); 
         $('.gated-form, .gated-form-bg').fadeOut("slow");
+        Calendly.initPopupWidget({
+            url: 'https://calendly.com/arnavr-aizencorp/intro?hide_gdpr_banner=1&text_color=242424&primary_color=d5efff'
+        });
         localStorage.setItem('formSubmitted', 'true');
         setTimeout(function() {
             localStorage.removeItem('formSubmitted');
         }, 86400000); // 86400000 ms = 1 day
     });
+    $(".contact-us-form").submit(function (e) { 
+        e.preventDefault(); 
+        Calendly.initPopupWidget({
+            url: 'https://calendly.com/arnavr-aizencorp/intro?hide_gdpr_banner=1&text_color=242424&primary_color=d5efff'
+        });
+    });
 }
+
+
+
 
 
 
@@ -551,14 +563,11 @@ $(".ac-dropdown").click(function (e) {
     const imageSrcset = $(this).find(".accordion-image-data").attr("srcset");
 
     const $image = $(".ac-image");
-
     // Set opacity to 0 to start the transition
     $image.css("opacity", "0");
-
     // Change the image src and srcset
     $image.attr("src", imageSrc);
     $image.attr("srcset", imageSrcset);
-
     // Wait for the new image to load, then fade it in
     $image.on("load", function() {
         $image.css("opacity", "1");
