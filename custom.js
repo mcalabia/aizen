@@ -425,9 +425,9 @@ function handleFormSubmission() {
     $(".gated-form-data").submit(function (e) { 
         e.preventDefault(); 
         $('.gated-form, .gated-form-bg').fadeOut("slow");
-        Calendly.initPopupWidget({
-            url: 'https://calendly.com/arnavr-aizencorp/intro?hide_gdpr_banner=1&text_color=242424&primary_color=d5efff'
-        });
+        // Calendly.initPopupWidget({
+        //     url: 'https://calendly.com/arnavr-aizencorp/intro?hide_gdpr_banner=1&text_color=242424&primary_color=d5efff'
+        // });
         localStorage.setItem('formSubmitted', 'true');
         setTimeout(function() {
             localStorage.removeItem('formSubmitted');
