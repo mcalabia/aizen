@@ -433,6 +433,14 @@ function handleFormSubmission() {
             localStorage.removeItem('formSubmitted');
         }, 86400000); // 86400000 ms = 1 day
     });
+    
+    $(".book-a-demo-form").submit(function (e) { 
+        e.preventDefault(); 
+        Calendly.initPopupWidget({
+                url: 'https://calendly.com/arnavr-aizencorp/intro?hide_gdpr_banner=1&text_color=242424&primary_color=d5efff'
+            });
+    });
+    
 }
 
 
