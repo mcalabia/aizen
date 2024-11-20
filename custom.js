@@ -501,16 +501,17 @@ $('.search-field').on('keyup', function () {
 });
   
 
-$('.header-nav-dropdown').on('click', function () {
+$(document).on('click', '.header-nav-dropdown', function () {
     $('.nav-menu').css('top', '0px');
     $('.w-nav-overlay').css('top', '0px');
   });
   
-  $('.nav-back').on('click', function () {
+  $(document).on('click', '.nav-back', function () {
     $('.nav-menu').css('top', '');
     $('.w-nav-overlay').css('top', '');
-    console.log("back")
+    console.log("back");
   });
+  
   
 
 
