@@ -73,7 +73,11 @@
     opacity: 1;
   }
   
-  
+  .nav-menu,
+.w-nav-overlay {
+  transition: top 0.3s ease-in-out;
+}
+
 
 @media print {
     header, footer, .nav-content {
