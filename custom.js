@@ -507,8 +507,8 @@ $('.header-nav-dropdown').on('click', function () {
   });
   
   $('.nav-back').on('click', function () {
-    $('.nav-menu').css('top', '100%');
-    $('.w-nav-overlay').css('top', '100%');
+    $('.nav-menu').css('top', '');
+    $('.w-nav-overlay').css('top', '');
     console.log("back")
   });
   
