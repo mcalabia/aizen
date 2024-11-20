@@ -507,6 +507,7 @@ $('.header-nav-dropdown').on('click', function () {
   
   $('.nav-back').on('click', function () {
     $('.w-nav-overlay').css('top', '100px');
+    console.log("back")
   });
   
 
