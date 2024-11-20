@@ -502,13 +502,13 @@ $('.search-field').on('keyup', function () {
   
 
 $('.header-nav-dropdown').on('click', function () {
-    $('.nav-menu').css('top', '0!important');
-    $('.w-nav-overlay').css('top', '0!important');
+    $('.nav-menu').css('top', '0px');
+    $('.w-nav-overlay').css('top', '0px');
   });
   
   $('.nav-back').on('click', function () {
-    $('.nav-menu').css('top', 'auto!important');
-    $('.w-nav-overlay').css('top', 'auto!important');
+    $('.nav-menu').css('top', '100px');
+    $('.w-nav-overlay').css('top', '100px');
     console.log("back")
   });
   
