@@ -501,16 +501,19 @@ $('.search-field').on('keyup', function () {
 });
   
 
-$(document).on('click', '.header-nav-dropdown', function () {
+$('.header-nav-dropdown').on('click', function () {
     $('.nav-menu').css('top', '0px');
     $('.w-nav-overlay').css('top', '0px');
   });
   
-  $(document).on('click', '.nav-back', function () {
-    $('.nav-menu').css('top', 'auto');
-    $('.w-nav-overlay').css('top', 'auto');
-    console.log($('.nav-menu').html());
+  $('.nav-back').on('click', function () {
+    setTimeout(function () {
+      $('.nav-menu').css('top', '');
+      $('.w-nav-overlay').css('top', '');
+    }, 100); // 100ms delay
+    console.log("back");
   });
+  
   
   
 
