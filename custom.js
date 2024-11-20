@@ -510,7 +510,7 @@ $('.header-nav-dropdown').on('click', function () {
     setTimeout(function () {
       $('.nav-menu').css('top', 'auto');
       $('.w-nav-overlay').css('top', 'auto');
-    }, 100); // 100ms delay
+    }, 50); // 100ms delay
     console.log("back");
   });
   
