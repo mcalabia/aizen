@@ -508,15 +508,14 @@ $('.header-nav-dropdown').on('click', function () {
   
   $('.nav-back').on('click', function () {
     setTimeout(function () {
-      $('.nav-menu').css('top', 'auto');
-      $('.w-nav-overlay').css('top', 'auto');
-    }, 50); // 100ms delay
+      $('.nav-menu').css('top', '104.375px');
+      $('.w-nav-overlay').css('top', '104.375px');
+    }, 50);
     console.log("back");
   });
   
   
   
-
 
 syncSearchFields('.search-field', '.search-field-floating-open');
 handleFormSubmission();
