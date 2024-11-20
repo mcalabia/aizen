@@ -501,6 +501,15 @@ $('.search-field').on('keyup', function () {
 });
   
 
+$('.header-nav-dropdown').on('click', function () {
+    $('.w-nav-overlay').css('top', '0');
+  });
+  
+  $('.nav-back').on('click', function () {
+    $('.w-nav-overlay').css('top', 'auto');
+  });
+  
+
 
 syncSearchFields('.search-field', '.search-field-floating-open');
 handleFormSubmission();
