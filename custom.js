@@ -502,11 +502,11 @@ $('.search-field').on('keyup', function () {
   
 
 $('.header-nav-dropdown').on('click', function () {
-    $('.w-nav-overlay').css('top', '0');
+    $('.nav-menu').css('top', '0');
   });
   
   $('.nav-back').on('click', function () {
-    $('.w-nav-overlay').css('top', 'auto!important');
+    $('.nav-menu').css('top', 'auto');
     console.log("back")
   });
   
