@@ -517,7 +517,11 @@ $('.header-nav-dropdown').on('click', function () {
   $('[dropdown-toggle="default"]').addClass('w--open');
   $('[dropdown-list="default"]').addClass('w--open');
 
-  $('[dropdown-toggle="default"]').click();
+ 
+    setTimeout(function () {
+      $('[data-dropdown-toggle="default"]').click();
+    }, 200); // Delay in milliseconds (200ms in this case)
+  
   // Handle click event on elements with class `dropdown-wrap`
   $('.accordion-dropdown-block-items').on('click', function () {
     $('[dropdown-toggle="default"]').removeClass('w--open');
