@@ -521,7 +521,7 @@ $('.header-nav-dropdown').on('click', function () {
     setTimeout(function () {
       $('[dropdown-toggle="default"]').click();
       $('[dropdown="default"]').click();
-    }, 200); // Delay in milliseconds (200ms in this case)
+    }, 2000); // Delay in milliseconds (200ms in this case)
   
   // Handle click event on elements with class `dropdown-wrap`
 //   $('.accordion-dropdown-block-items').on('click', function () {
