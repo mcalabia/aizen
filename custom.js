@@ -166,8 +166,8 @@ $(document).ready(function() {
     // Example usage
     const elements = [
         { selector: "#data", trigger: "[trigger='data-container']" },
-        { selector: "#machine-learning", trigger: "[trigger='machine-learning']" },
-        { selector: "#infrastructure", trigger: "[trigger='infrastructure']" } 
+        { selector: "#machine-learning", trigger: "[trigger='machine-learning-container']" },
+        { selector: "#infrastructure", trigger: "[trigger='infrastructure-container']" } 
     ];
     
 
