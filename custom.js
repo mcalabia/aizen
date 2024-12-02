@@ -513,7 +513,17 @@ $('.header-nav-dropdown').on('click', function () {
   });
   
   
-  
+  // Add the "w--open" class to elements with specific data attributes
+  $('[data-dropdown-toggle="default"]').addClass('w--open');
+  $('[data-dropdown-list="default"]').addClass('w--open');
+
+  // Handle click event on elements with class `dropdown-wrap`
+  $('.accordion-dropdown-block-items').on('click', function () {
+    $('[data-dropdown-toggle="default"]').removeClass('w--open');
+    $('[data-dropdown-list="default"]').removeClass('w--open');
+  });
+
+
 
 syncSearchFields('.search-field', '.search-field-floating-open');
 handleFormSubmission();
