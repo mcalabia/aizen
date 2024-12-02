@@ -514,15 +514,13 @@ $('.header-nav-dropdown').on('click', function () {
   
   
   // Add the "w--open" class to elements with specific data attributes
-//   $('[dropdown-toggle="default"]').addClass('w--open');
-//   $('[dropdown-list="default"]').addClass('w--open');
+  $('[dropdown-toggle="default"]').addClass('w--open');
+  $('[dropdown-list="default"]').addClass('w--open');
+  $('[dropdown="default]').addClass('w--open');
+
 
  
-    setTimeout(function () {
-    //   $('[dropdown-toggle="default"]').click();
-      $('[dropdown="default"]').click();
-    }, 2000); // Delay in milliseconds (200ms in this case)
-  
+   
   // Handle click event on elements with class `dropdown-wrap`
 //   $('.accordion-dropdown-block-items').on('click', function () {
 //     $('[dropdown-toggle="default"]').removeClass('w--open');
