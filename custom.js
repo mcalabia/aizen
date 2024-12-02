@@ -514,11 +514,11 @@ $('.header-nav-dropdown').on('click', function () {
   
   
   // Add the "w--open" class to elements with specific data attributes
-  $('[dropdown-toggle="default"]').addClass('w--open');
-  $('[dropdown-list="default"]').addClass('w--open');
-  $('[dropdown="default]').addClass('w--open');
+//   $('[dropdown-toggle="default"]').addClass('w--open');
+//   $('[dropdown-list="default"]').addClass('w--open');
+//   $('[dropdown="default]').addClass('w--open');
 
-
+  $('[dropdown-toggle="default').trigger('click');
  
    
   // Handle click event on elements with class `dropdown-wrap`
