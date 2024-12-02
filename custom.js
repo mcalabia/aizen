@@ -519,7 +519,7 @@ $('.header-nav-dropdown').on('click', function () {
 
  
     setTimeout(function () {
-      $('[dropdown-toggle="default"]').click();
+    //   $('[dropdown-toggle="default"]').click();
       $('[dropdown="default"]').click();
     }, 2000); // Delay in milliseconds (200ms in this case)
   
