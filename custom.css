@@ -78,6 +78,15 @@
   transition: top 0.3s ease-in-out;
 }
 
+.ac-dropdown.w-dropdown {
+    opacity: .5;
+}
+.ac-dropdown.w-dropdown.is-active-accordion{
+    opacity: 1;
+}
+.ac-arrow.w-embed.is-active-accordion {
+    transform: rotate(180deg);
+}
 
 @media print {
     header, footer, .nav-content {
