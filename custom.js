@@ -519,7 +519,7 @@ $('.header-nav-dropdown').on('click', function () {
 //   $('[dropdown="default]').addClass('w--open');
 
   $('[dropdown-toggle="default').trigger('click');
- 
+  $('[dropdown="default').trigger('click');
    
   // Handle click event on elements with class `dropdown-wrap`
 //   $('.accordion-dropdown-block-items').on('click', function () {
