@@ -80,10 +80,10 @@
 
 
 
-.ac-dropdown.w-dropdown, .dtct-dropdown-mobile{
+.ac-dropdown.w-dropdown, .dtct-dropdown-mobile.w-dropdown{
     opacity: .5;
 }
-.ac-dropdown.w-dropdown.is-active-accordion, .dtct-dropdown-mobile{
+.ac-dropdown.w-dropdown.is-active-accordion, .dtct-dropdown-mobile.w-dropdown.is-active-accordion{
     opacity: 1;
 }
 .ac-arrow.w-embed.is-active-accordion {
