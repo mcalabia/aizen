@@ -96,7 +96,7 @@
 .cms-rich-text h3::before, 
 .cms-rich-text h4::before, 
 .cms-rich-text h5::before{
-     content: ''; display: block; height: 200px; margin: -200px 0 0 0; 
+     content: ''; display: block; height: 120px; margin: -120px 0 0 0; 
 
 }
 
