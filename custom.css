@@ -89,6 +89,9 @@
 .ac-arrow.w-embed.is-active-accordion {
     transform: rotate(180deg);
 }
+.dtct-dropdown-toggle.is-active-accordion{
+    display:none;
+}
 
 @media print {
     header, footer, .nav-content {
