@@ -91,13 +91,16 @@
     display:none;
 }
 
-.cms-rich-text h1, 
-.cms-rich-text h2, 
-.cms-rich-text h3, 
-.cms-rich-text h4, 
-.cms-rich-text h5, 
-.cms-rich-text h6{
-    scroll-margin-top: 100px;
+.cms-rich-text h1::before, 
+.cms-rich-text h2::before, 
+.cms-rich-text h3::before, 
+.cms-rich-text h4::before, 
+.cms-rich-text h5::before, 
+.cms-rich-text h6::before{
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
 }
 
 @media print {
