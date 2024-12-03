@@ -78,8 +78,6 @@
   transition: top 0.3s ease-in-out;
 }
 
-
-
 .ac-dropdown.w-dropdown, .dtct-dropdown-mobile.w-dropdown{
     opacity: .5;
 }
@@ -91,6 +89,15 @@
 }
 .dtct-dropdown-toggle.is-active-accordion{
     display:none;
+}
+
+.cms-rich-text h1, 
+.cms-rich-text h2, 
+.cms-rich-text h3, 
+.cms-rich-text h4, 
+.cms-rich-text h5, 
+.cms-rich-text h6{
+    scroll-margin-top: 100px;
 }
 
 @media print {
