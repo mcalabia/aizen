@@ -91,10 +91,14 @@
     display:none;
 }
 
-.cms-rich-text {
-    scroll-padding-top: 200px;
-}
+.cms-rich-text h1::before, 
+.cms-rich-text h2::before, 
+.cms-rich-text h3::before, 
+.cms-rich-text h4::before, 
+.cms-rich-text h5::before{
+     content: ''; display: block; height: 50px; margin: -50px 0 0 0; 
 
+}
 
 @media print {
     header, footer, .nav-content {
