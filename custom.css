@@ -78,10 +78,12 @@
   transition: top 0.3s ease-in-out;
 }
 
-.ac-dropdown.w-dropdown {
+
+
+.ac-dropdown.w-dropdown, .dtct-dropdown-mobile{
     opacity: .5;
 }
-.ac-dropdown.w-dropdown.is-active-accordion{
+.ac-dropdown.w-dropdown.is-active-accordion, .dtct-dropdown-mobile{
     opacity: 1;
 }
 .ac-arrow.w-embed.is-active-accordion {
