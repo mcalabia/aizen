@@ -566,7 +566,7 @@ animateElementWithScrollTrigger("._3-up-card-grid-section-content", "._3-up-card
 animateElementWithScrollTrigger("._3-up-card-grid-section-grid", "._3-up-card-grid-section-grid", .3);
 animateElementWithScrollTrigger(".featured-resource-title-block", ".featured-resource-title-block", .3);
 animateElementWithScrollTrigger(".featured-resource-body", ".featured-resource-body", .3);
-animateElementWithScrollTrigger(".all-resources-filter", ".all-resources-filter", .3);
+
 animateElementWithScrollTrigger(".w-dyn-list", ".w-dyn-list", .3);
 animateElementWithScrollTrigger(".about-us-hero-container", ".about-us-hero-container", .3);
 animateElementWithScrollTrigger(".investor-logos-container", ".investor-logos-container", .3);
