@@ -1,12 +1,3 @@
-
-.navbar.transparent {
-    /* background-color: transparent!important; */
-  }
-
- 
- .cci-cards .owl-item {
-    flex-grow: 1;
- }
 .cci-cards .owl-stage-outer, .testimonial-owl-carousel .owl-stage-outer{
     overflow: visible!important;
 }

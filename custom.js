@@ -1,11 +1,3 @@
-$(window).on('scroll', function() {
-    if ($(window).scrollTop() > 0) {
-      $('.navbar').removeClass('transparent').addClass('solid');
-    } else {
-      $('.navbar').removeClass('solid').addClass('transparent');
-    }
-  });
-
 $(document).ready(function() {
     
     $('.lc-owl-carousel').owlCarousel({
