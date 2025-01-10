@@ -14,7 +14,7 @@ $(document).ready(function() {
         smartSpeed: 6000,
         responsive: {
             0: {
-                margin: 30, 
+                margin: 50, 
             },
             768: {
                 margin: 112,
