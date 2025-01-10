@@ -11,7 +11,15 @@ $(document).ready(function() {
         autoplayHoverPause:false,
         slideTransition: 'linear',
         autoplaySpeed: 6000,
-        smartSpeed: 6000
+        smartSpeed: 6000,
+        responsive: {
+            0: {
+                margin: 30, 
+            },
+            768: {
+                margin: 112,
+            }
+        }
     })
 
     $('.tcl-owl-carousel').owlCarousel({
