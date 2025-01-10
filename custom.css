@@ -2,10 +2,8 @@
 .navbar.transparent {
     /* background-color: transparent!important; */
   }
-  
-  .cci-cards .owl-stage{
-    display: flex;
- }
+
+ 
  .cci-cards .owl-item {
     flex-grow: 1;
  }
