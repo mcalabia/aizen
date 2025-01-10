@@ -1,3 +1,6 @@
+.header.transparent {
+    background-color: transparent!important;
+  }
 .cci-cards .owl-stage-outer, .testimonial-owl-carousel .owl-stage-outer{
     overflow: visible!important;
 }
