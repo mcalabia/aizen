@@ -1,11 +1,11 @@
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 0) {
-      $('.header').removeClass('transparent').addClass('solid');
+      $('.navbar').removeClass('transparent').addClass('solid');
     } else {
-      $('.header').removeClass('solid').addClass('transparent');
+      $('.navbar').removeClass('solid').addClass('transparent');
     }
   });
-  
+
 $(document).ready(function() {
     
     $('.lc-owl-carousel').owlCarousel({
