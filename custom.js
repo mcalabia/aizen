@@ -1,8 +1,8 @@
 $(window).on('scroll', function() {
     if ($(window).scrollTop() > 0) {
-      $('.navbar').removeClass('transparent').addClass('solid');
+      $('.navbar').removeClass('nav-top').addClass('nav-scroll');
     } else {
-      $('.navbar').removeClass('solid').addClass('transparent');
+      $('.navbar').removeClass('nav-scroll').addClass('nav-top');
     }
   });
 
