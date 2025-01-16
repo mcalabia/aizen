@@ -1,9 +1,4 @@
-
-.navbar.transparent {
-     /* background-color: transparent!important; */
-  }
-  
-  .cci-cards .owl-stage{
+ .cci-cards .owl-stage{
     display: flex;
  }
  .cci-cards .owl-item {
@@ -118,6 +113,14 @@
 }
 
 @media (max-width: 767px) {
+    .nav-scroll .nav-content img{
+        width: 60px;
+    }
+    
+    .nav-scroll .nav-content {
+        padding: 5px 20px;
+    }
+    
     .cci-cards .owl-nav, .testimonial-owl-carousel .owl-nav{
         position: absolute;
         bottom: -28px;
