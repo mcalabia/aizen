@@ -355,8 +355,6 @@ function initRevealOnScroll() {
 
 
 
-
-
 function animateElementWithScrollTrigger(element, section, delay) {
     const elementdata = document.querySelector(element);
 if(elementdata){
@@ -462,8 +460,6 @@ function handleFormSubmission() {
 
 
 
-
-
   function toggleFloatingBlock(sectionClass, floatingClass, delay) {
   if (floatingClass) {
         gsap.fromTo(floatingClass, 
@@ -471,7 +467,7 @@ function handleFormSubmission() {
             {
                 y: 0, 
                 opacity: 1, 
-                duration: 0.3, 
+                duration: 0, 
                 delay: delay,
                 ease: "power2.out",
                 scrollTrigger: {
