@@ -454,6 +454,14 @@ function handleFormSubmission() {
                 url: 'https://calendly.com/arnavr-aizencorp/intro?hide_gdpr_banner=1&text_color=242424&primary_color=d5efff'
             });
     });
+
+    $(".contact-us-form").submit(function (e) { 
+        e.preventDefault(); 
+        Calendly.initPopupWidget({
+                url: 'https://calendly.com/arnavr-aizencorp/intro?hide_gdpr_banner=1&text_color=242424&primary_color=d5efff'
+            });
+    });
+    
     
 }
 
